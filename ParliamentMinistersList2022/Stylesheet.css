@@ -1,0 +1,21 @@
+strong
+{
+    font-size: 60px;
+}
+span{
+    text-shadow: 4px 4px 4px black;
+    color:red;
+}
+p{
+    font-size: 40px;
+}
+h2
+{
+    font-size: 20px;
+}
+h3
+{
+    text-align: end;
+}
+
+
