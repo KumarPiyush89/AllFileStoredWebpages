@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Java Script</title>
+    <script>
+        function change()
+        {
+            /*thi function will change the content of tag h1*/
+            
+            var e; //here e is a variable it can store any type of value
+            /*1 Access the html element and store its reference in variable e*/
+            e=document.getElementById("nelement");
+            //we can change the content of any html element by its innerHTML property*/
+            if(e.innerHTML===" Kumar Piyush ")
+            e.innerHTML="Golu kumar";
+            else
+            e.innerHTML="Kumar Piyush";
+
+
+        }
+        var s=true;
+        function change1()
+        {
+            var e=document.getElementById("nelement")
+            if(s)
+            {
+                e.innerHTML="Golu Kumar";
+            }
+            else
+            e.innerHTML=" Kumar Piyush ";
+
+            s=!s;
+        }
+    </script>
+</head>
+<body>
+<h1 id="nelement"> Kumar Piyush </h1>
+<button onclick="change1();">Change</button>    
+</body>
+</html>

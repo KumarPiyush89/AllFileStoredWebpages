@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interest Calculator</title>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous">
+    </script>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+<script>
+    function calculateSI()
+    {
+        //access all input controls
+        var pa=document.getElementById("pa");
+        var r=document.getElementById("rate");
+        var t=document.getElementById("time");
+        var si=document.getElementById("si");
+
+        //we can access the value of any input element by value property
+        //value property always gives string value
+
+        //check all values are entered or not
+        if(pa.value==="")
+        {
+            alert("Please Enter Principal amount.");
+            pa.focus();
+            return;
+        }
+        
+        if(r.value==="")
+        {
+            alert("Please Enter Rate of interest.");
+            r.focus();
+            return;
+        }
+
+        if(t.value==="")
+        {
+            alert("Please Enter Time.");
+            t.focus();
+            return;
+        }
+
+        //read value from all input element, convert it into float and strore in variables
+        var pav=parseFloat(pa.value);
+        var rv=parseFloat(r.value);
+        var tv=parseFloat(t.value);
+        
+        //calculate si
+        var siv=(pav*rv*tv)/100;
+        //set result in simple interest element
+        si.value=siv+"";
+
+    }
+
+    function resetSI()
+    {
+        //set empty string in all input element
+        document.getElementById("pa").value="";
+        document.getElementById("rate").value="";
+        document.getElementById("time").value="";
+        document.getElementById("si").value="";
+
+        //set focus on principal amount element
+        document.getElementById("pa").focus();
+    }
+
+    function printTable()
+    {
+        //access input element
+        var unelement=document.getElementById("untbx");
+        //check user has entered number or not
+        if(unelement.value==="")
+        {
+            alert("Please enter number first.");
+            unelement.focus();
+            return;
+        }
+        //read value from input element
+        var n=parseFloat(unelement.value);
+
+        //access all level and set result on all label
+        document.getElementById("tm").innerHTML="Table Of "+n;
+        document.getElementById("l1").innerHTML=n+" * 1 = "+(n*1);
+        document.getElementById("l2").innerHTML=n+" * 2 = "+(n*2);
+        document.getElementById("l3").innerHTML=n+" * 3 = "+(n*3);
+        document.getElementById("l4").innerHTML=n+" * 4 = "+(n*4);
+        document.getElementById("l5").innerHTML=n+" * 5 = "+(n*5);
+        document.getElementById("l6").innerHTML=n+" * 6 = "+(n*6);
+        document.getElementById("l7").innerHTML=n+" * 7 = "+(n*7);
+        document.getElementById("l8").innerHTML=n+" * 8 = "+(n*8);
+        document.getElementById("l9").innerHTML=n+" * 9 = "+(n*9);
+        document.getElementById("l10").innerHTML=n+" * 10 = "+(n*10);
+
+    }
+
+    function resetTable()
+    {
+        document.getElementById("l1").innerHTML="";
+        document.getElementById("l2").innerHTML="";
+        document.getElementById("l3").innerHTML="";
+        document.getElementById("l4").innerHTML="";
+        document.getElementById("l5").innerHTML="";
+        document.getElementById("l6").innerHTML="";
+        document.getElementById("l7").innerHTML="";
+        document.getElementById("l8").innerHTML="";
+        document.getElementById("l9").innerHTML="";
+        document.getElementById("l10").innerHTML="";
+        document.getElementById("untbx").value="";
+        document.getElementById("untbx").focus();
+    }
+</script>
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-12 text-center">
+                <h1>Interest Calculator</h1>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-12 text-center">
+                <h2>Simple Interest Calculator</h2>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-3 text-center">
+                <label>Principal Amount</label><br/>
+                <input type="number" id="pa" class="form-control" placeholder="Principal Amount"/>                
+            </div>
+            <div class="col-sm-3 text-center">
+                <label>Rate</label><br/>
+                <input type="number" id="rate" class="form-control" placeholder="Rate"/>
+            </div>
+            <div class="col-sm-3 text-center">
+                <label>Time</label><br/>
+                <input type="number" id="time" class="form-control" placeholder="Time"/>
+            </div>
+            <div class="col-sm-3 text-center">
+                <label>Simple Interest</label><br/>
+                <input type="number" id="si" class="form-control" readonly placeholder="Simple Interest"/>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-12 text-center">
+                <br/>
+                <button type="button" class="btn btn-success" onclick="calculateSI();">Calculate</button>
+                <button type="button" class="btn btn-primary" onclick="resetSI()">Reset</button>
+            </div>
+        </div>
+
+       <div class="row">
+            <div class="col-sm-12 text-center">
+                <h1>Table</h1>
+            </div>
+            
+            <div class="row">
+                <div class="col-sm-5">
+                    <label>Enter number to print Table</label>
+                </div>
+                <div class="col-sm-5">
+                    <input type="text" id="untbx" placeholder="Number To Print Table" class="form-control"/>
+                </div>
+                <div class="col-sm-1">
+                    <button class="btn btn-outline-success" onclick="printTable();">Print Table</button>
+                </div>
+                <div class="col-sm-1">
+                    <button class="btn btn-outline-info" onclick="resetTable();">Reset</button>
+                </div>
+            </div>
+
+            <!--Lebels to show table result-->
+            <div class="row">
+                <div class="col-sm-12">
+                    <h4 id="tm"></h4>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12 text-center">
+                    <span class="label label-primary text-center" id="l1"></span>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12 text-center">
+                    <span class="label label-default text-center" id="l2"></span>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12 text-center">
+                    <span class="label label-default text-center" id="l3"></span>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12 text-center">
+                    <span class="label label-default text-center" id="l4"></span>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12 text-center">
+                    <span class="label label-default text-center" id="l5"></span>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12 text-center">
+                    <span class="label label-default text-center" id="l6"></span>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12 text-center">
+                    <span class="label label-default text-center" id="l7"></span>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12 text-center">
+                    <span class="label label-default text-center" id="l8"></span>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12 text-center">
+                    <span class="label label-default text-center" id="l9"></span>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12 text-center">
+                    <span class="label label-default text-center" id="l10"></span>
+                </div>
+            </div>
+       </div>
+       
+    </div>
+    <div class="container">
+        <span class="label label-danger">piyush</span> 
+    </div>
+</body>
+</html>

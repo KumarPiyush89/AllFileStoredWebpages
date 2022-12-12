@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript String Examples</title>
+    <script>
+        function ex1()
+    {
+        var str="Hello JS";
+        alert(str);
+    }
+    function ex2()
+    {
+        var str='Hello JS';
+        alert(str);
+    }
+    function ex3()
+    {
+        var str="He said to me, \"I am ready\".";
+        alert(str);
+    }
+    function ex4()
+    {
+        var str='He said to me, "I am ready".';
+        alert(str);
+    }
+    function ex5()
+    {
+        var str=2+2;
+        alert(str);
+    }
+    function ex6()
+    {
+        var str=2+'2';
+        alert(str);
+    }
+    function ex7()
+    {
+        var str='2'+'2';
+        alert(str);
+    }
+    function ex8()
+    {
+        var str=2+2+'2';
+        alert(str);
+    }
+    function ex9()
+    {
+        var str='2'+2+2;
+        alert(str);
+    }
+    function ex10()
+    {
+        var str=2+2+'2'+2+2;
+        alert(str);
+    }
+    function ex11()
+    {
+        var str=2+2+'2'+(2+2);
+        alert(str);
+    }
+    function display()
+    {
+        var sname=document.getElementById("un").value;
+        var age=document.getElementById("age").value;
+        var pos=document.getElementById("pos").value;
+        document.getElementById("op").innerHTML="Congrats! Mr/Miss "+sname+", "+age+"yrs, You have got "+pos+" position in class." ;
+    }
+    </script>
+
+</head>
+<body>
+    <button onclick="ex1();">Example1</button>
+    <button onclick="ex2();">Example2</button>
+    <button onclick="ex3();">Example3</button>
+    <button onclick="ex4();">Example4</button>
+    <button onclick="ex5();">Example5</button>
+    <button onclick="ex6();">Example6</button>
+    <button onclick="ex7();">Example7</button>
+    <button onclick="ex8();">Example8</button>
+    <button onclick="ex9();">Example9</button>
+    <button onclick="ex10();">Example10</button>
+    <button onclick="ex11();">Example11</button>
+    <input type="text" id="un" placeholder="Person's Name"/>
+    <input type="number" id="age" placeholder="Age"/>
+    <input type="text" id="pos" placeholder="position in class"/>
+    <button onclick="display()">OK</button>
+    <p id="op"></p>
+</body>
+</html>

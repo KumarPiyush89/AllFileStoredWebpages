@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TIK TOK TIK TOK</title>
+    <script>
+        function setValueToD()
+        {
+            var now=new Date();
+            document.getElementById("d").innerHTML=now.getDate()+"/"+(now.getMonth()+1)+"/"+now.getFullYear()+" "+now.getHours()+":"+now.getMinutes()+":"+now.getSeconds();
+        }
+        var q=["Work is worship",
+    "Tell my mistakes to me, no to others because they are corrected by me not by them",
+    "Inqualb Jindabad",
+    "Jai Sri Ram",
+    "Education is the most powerful weapon that can use to change the world",
+    "Education is the milk of a lioness, whoever drinks it will roar",
+    ];
+    function setQuotationToQ()
+    {
+        //get a random number between 0 and total number of quotations
+        var rn=Math.floor(Math.random()*q.length);
+        document.getElementById("Q").innerHTML=q[rn];
+    }
+    </script>
+    
+
+</head>
+<body onload="setValueToD();setInterval(setValueToD,1000);setQuotationToQ();setInterval(setQuotationToQ,5000);">
+    <h1 id="d" style="text-align: center;"></h1>
+    <h1 id="Q" style="text-align:center;"></h1>
+</body>
+</html>

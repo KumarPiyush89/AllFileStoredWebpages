@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> All Keyword's is uses C Language </title>
+     <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+<!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+
+    <script>
+        var Keyword=[
+            ["Select C keyword",""],
+            ["auto","The auto keyword declares automatic variables.<br/>This statement suggests that var1 is a variable of storage class auto and type int.<br/>Variables declared within function bodies are automatic by default. They are recreated each time a function is executed.<br/>Since automatic variables are local to a function, they are also called local variables."],
+            ["break and continue","The break statement terminates the innermost loop immediately when it's encountered. It's also used to terminate the switch statement & The continue statement skips the statements after it inside the loop for the iteration."],
+            ["switch, case and default","The switch and case statement is used when a block of statements has to be executed among many blocks."],
+            ["char","The char keyword declares a character variable."],
+            ["const","An identifier can be declared constant by using the const keyword."],
+            ["do...while","The switch and case statement is used when a block of statements has to be executed among many blocks."],
+            ["double and float","Keywords double and float are used for declaring floating type variables."],
+            ["if and else","if and else are used to make decisions."],
+            ["enum","Enumeration types are declared in C programming using keyword enum."],
+            ["extern","The extern keyword declares that a variable or a function has external linkage outside of the file it is declared."],
+            ["for","There are three types of loops in C programming. The for loop is written in C programming using the keyword for."],
+            ["goto","The goto statement is used to transfer control of the program to the specified label."],
+            ["int","The int keyword is used to declare integer type variables."],
+            ["short, long, signed and unsigned","The short, long, signed and unsigned keywords are type modifiers that alter the meaning of a base data type to yield a new type."],
+            ["return","The return keyword terminates the function and returns the value."],
+            ["sizeof","The sizeof keyword evaluates the size of data (a variable or a constant)."],
+            ["register","The register keyword creates register variables which are much faster than normal variables."],
+            ["static","The static keyword creates a static variable. The value of a static variables persists untill the end of the program."],
+            ["struct","The struct keyword is used for declaring a structure. A structure can hold variables of different types under a single name."],
+            ["typedef","The typedef keyword is used to explicitly associate a type with an identifier."],
+            ["union","A union is used for grouping different types of variables under a single name."],
+            ["void","The void keyword meaning nothing or no value."],
+            ["volatile","The volatile keyword is used for creating volatile objects. A volatile object can be modified in an unspecified way by the hardware."]
+
+        ];
+
+        function showKeywordsInfo()
+        {
+        //Show The Keyword Info Area
+        var d=document.getElementById("Keywords");
+        d.style.display="block";
+        // Add All Keyword Name In Select Tag or Drop Down list
+        var options="";
+        var i;
+        for (i=0;i<Keyword.length;i+=1)
+        {
+            options=options+"<option value=\""+i+'">'+Keyword[i][0]+'</option>';
+        }
+        
+       //set option in setect tag
+       document.getElementById("Keyword").innerHTML=options;
+       }
+       function displayInfo()
+       {
+        // Get The Selected Item Value
+        var selectedKeyIndex=parseInt(document.getElementById("Keyword").value);
+        //alert("You Have Selected:"+selectedKeyIndex);
+        // Set The Details On Lebel Of Selected Key
+        document.getElementById("sn").innerHTML=Keyword[selectedKeyIndex][0];
+        document.getElementById("c").innerHTML=Keyword[selectedKeyIndex][1];
+        document.getElementById("cm").innerHTML=Keyword[selectedKeyIndex][2];
+        }
+    </script>
+    </head>
+    <body onload="showKeywordsInfo();">
+        <div class="container-fluid">
+            <h1 class="bg-light">C (programming language)<hr/></h1>
+            <div class="row">
+                <div class="col-sm-8">
+                    <p><b>
+                        C  is a general-purpose computer programming language. It was created in the 1970s by Dennis Ritchie, and remains very widely used and influential. By design, C's features cleanly reflect the capabilities of the targeted CPUs. It has found lasting use in operating systems, device drivers, protocol stacks, though decreasingly for application software. C is commonly used on computer architectures that range from the largest supercomputers to the smallest microcontrollers and embedded systems.
+
+                        A successor to the programming language B, C was originally developed at Bell Labs by Ritchie between 1972 and 1973 to construct utilities running on Unix. It was applied to re-implementing the kernel of the Unix operating system. During the 1980s, C gradually gained popularity. It has become one of the most widely used programming languages, with C compilers available for almost[citation needed] all modern computer architectures and operating systems. C has been standardized by ANSI since 1989 (ANSI C) and by the International Organization for Standardization (ISO).
+
+                        C is an imperative procedural language supporting structured programming, lexical variable scope, and recursion, with a static type system. It was designed to be compiled to provide low-level access to memory and language constructs that map efficiently to machine instructions, all with minimal runtime support. Despite its low-level capabilities, the language was designed to encourage cross-platform programming. A standards-compliant C program written with portability in mind can be compiled for a wide variety of computer platforms and operating systems with few changes to its source code.
+
+                        Since 2000, C has consistently ranked among the top two languages in the TIOBE index, a measure of the popularity of programming languages.
+                    </b></p>
+                </div>
+                <div class="col-sm-4">
+                    <p class="bg-light">
+                        <img src="Ken_Thompson_and_Dennis_Ritchie--1973.jpg" alt="" title="Dennis Ritchie with Ken Thompson" style="width: 100%;"/><b>Dennis Ritchie (right), the inventor of the C programming language, with Ken Thompson</b>
+                    </p>
+                </div>
+            </div>
+            <div class="p-3 text-center">
+                <h1 class="text-primary"><b><u> 32 Keyword's in C </u></b></h1>
+            </div>
+            <div>
+                <h2>A keyword in C is basically a reserved word that cannot be used as a variable name, constant name, etc., there are only 32 keywords in the C language.<br/>
+                    In C, we have 32 keywords, which have their predefined meaning and cannot be used as a variable name. These words are also known as “reserved words”. It is good practice to avoid using these keywords as variable name. These are –</h2>
+            </div>
+           
+            <div id="Keywords" style="display: none;" >
+                <div class="row">
+                    <div class="col-sm-2 bg-info"></div>
+                    <div class="col-sm-8 text-center"><br/><br/>
+                        <select id="Keyword" class="form-control form-control-lg text-center bg-info" onchange="displayInfo();"></select><br/><br/>
+                    </div>
+                    <div class="col-sm-2 bg-info " ></div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-4 text-center">
+                        <h2 class="text-center text-muted "><i><u> Keyword's  </u></i></h2>
+                        <br/>
+                        <h1 id="sn" class="text-muted border border-info border-5"> Keyword's </h1><br/>
+                    </div>
+                    <div class="col-sm-8 text-body">
+                        <h2 class=" text-center text-muted "><i><u> Explanation's </u></i></h2>
+                        <br/>
+                        <h1 id="c" class="text-center border border-success border-5"> Explanation </h1><br/>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row border border border-info border-5 text-primary">
+                <div class="col-sm-2 bg-secondary"><img src="images.jfif" alt="data" style="width: 100%; "/><br/><br/><img src="download.png" alt="data" style="width: 100%; "/></div>
+                <div class="col-sm-2">
+                    <ul>
+                    <h1><li>auto<br/></li>
+                        <li>const<br/></li>
+                        <li>double<br/></li>
+                        <li>float<br/></li>
+                        <li>int<br/></li>
+                        <li>short<br/></li>
+                        <li>struct<br/></li>
+                        <li>unsigned<br/></li>
+
+                    </h1>
+                    </ul>
+                </div>
+                <div class="col-sm-2">
+                   <ul>
+                    <h1>
+                        <li>break<br/></li>
+                        <li>continue<br/></li>
+                        <li>else<br/></li>
+                        <li>for<br/></li>
+                        <li>long<br/></li>
+                        <li>signed<br/></li>
+                        <li>switch<br/></li>
+                        <li>void<br/></li>
+                    </h1>
+                    </ul>
+                </div>
+                <div class="col-sm-2">
+                    <ul>
+                    <h1>
+                        <li>case<br/></li>
+                        <li>default<br/></li>
+                        <li>enum<br/></li>
+                        <li>goto<br/></li>
+                        <li>register<br/></li>
+                        <li>sizeof<br/></li>
+                        <li>typedef<br/></li>
+                        <li>validate<br/></li>
+                    </h1>
+                    </ul>
+                </div>
+                <div class="col-sm-2">
+                    <ul>
+                    <h1>
+                        <li>char<br/></li>
+                        <li>do<br/></li>
+                        <li>extern<br/></li>
+                        <li>if<br/></li>
+                        <li>return<br/></li>
+                        <li>static<br/></li>
+                        <li>union<br/></li>
+                        <li>while</li>
+                    </h1>
+                    </ul>
+                </div>
+               
+                <div class="col-sm-2 bg-secondary"  ><img src="images.jfif" alt="data" style="width: 100%; "/><br/><br/><img src="download.png" alt="data" style="width: 100%; "/></div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12 bg-dark">
+                    <br/><br/><br/><br/><br/>
+                </div>
+            </div>
+        </div>
+
+    </body>
+</html>

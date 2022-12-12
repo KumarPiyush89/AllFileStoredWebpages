@@ -1,0 +1,65 @@
+body 
+{
+    background-color: black;
+}
+#search
+{
+    width: 17%;
+    position: relative;
+}
+.logo span
+{
+    color: #FFDE59;
+    font-size: 70px;
+}
+.logo 
+{
+    font-size: 45px;
+    font-weight: 600;
+    width: 30%;
+    margin-left: 100px;
+}
+p
+{   /*text-align: center;*/
+    font-size: 50px;
+    font-weight: 400;
+    width: 30%;
+    margin-left: 70px;
+}
+span
+{
+    font-weight: 150;
+    font-size: 50px;
+    width:20%;
+    margin-left: 30px;
+    color: yellow;
+    text-shadow: 4px 4px 4px black;
+
+}
+i 
+{
+    margin-left: 30px;
+}
+strong 
+{
+    text-shadow: 4px 4px 4px black;
+    color: yellow;
+    font-size: 60px;
+}
+img 
+{
+    margin-left: 20%;
+}
+b
+{
+    bottom: 5%;
+}
+.logo
+{
+    
+    font-weight: 600;
+    width: 30%;
+    margin-left: 100px;
+    color: #FFDE59;
+    font-size: 70px;
+}

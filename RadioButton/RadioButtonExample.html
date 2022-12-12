@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RadioButton</title>
+    <script>
+        function checkEligibility()
+        {
+            var agebox=document.getElementById("age");
+            var maleRadio=document.getElementById("mr");
+            var femaleRadio=document.getElementById("fr");
+
+            if(agebox.value==="")
+            {
+                alert("Please Enter age.");
+                agebox.focus();
+                return;
+            }            
+            var age=parseInt(agebox.value);
+            var gender;
+            if(maleRadio.checked==true)
+            gender='m';
+            else
+            gender='f';
+
+
+            var r=document.getElementById("result");
+            if(gender=='m')
+            {
+                if(age>=21)
+                {
+                    r.innerHTML="Congrats! Mr. you are eligible for marriage.";
+                    r.style.color="rgb(0,200,0)";
+                }
+                else
+                {
+                    r.innerHTML="OOPS! Mr. currently you are not eligible for marriage.";
+                    r.style.color="rgb(255,0,0)";
+                }
+            }
+            else
+            {
+                if(age>=18)
+                {
+                    r.innerHTML="Congrats! Miss you are eligible for marriage.";
+                    r.style.color="rgb(0,255,0)";
+                }
+                else
+                {
+                    r.innerHTML="OOPS! Miss currently you are not eligible for marriage.";
+                    r.style.color="rgb(255,0,0)";
+                }
+            }
+
+        }
+    </script>
+</head>
+<body>
+    <h1>Check Marriage Eligibility</h1>
+    <label>Enter age of person:</label><input type="number" id="age" placeholder="Age"/><br/>
+    <label>OR</label><br/>
+    <label>Date Of Birth:</label><input type="date" id="dob" /><br/>
+    <label>Gender:</label><input type="radio" value="m" name="gender" checked id="mr"/><label>Male</label>
+    <input type="radio" value="f" name="gender" id="fr"/><label>Female</label>
+    <br/><button onclick="checkEligibility();">Check</button>
+    <h1 id="result"></h1>
+    
+</body>
+</html>
