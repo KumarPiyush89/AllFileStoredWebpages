@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clock</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        :root{
+            --hr-color: #d47100;
+            --mn-color: #00b478;
+            --sc-color: #ffffff;
+
+        }
+        body{
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(150deg, #034, #034 50%, transparent 50%,
+            transparent), linear-gradient(50deg, #70012f 50%, #8a8 50%, #8a8);
+        }
+        .clock{
+            position: relative;
+            width: 300px;
+            height: 300px;
+            background: radial-gradient(transparent, rgba(255,255,255,0.2)),
+            background-size: cover;
+            border-radius: 50%;
+            box-shadow: 1px 1px 2px #2229,-1px -1px 2px #fff9;
+
+        }
+        .clock::before{
+            content: '';
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50px, -50%);
+            width: 106%;
+            height: 106%;
+            backdrop-filter: blur(25px);
+            z-index: -1;
+            border-radius: inherit;
+            border: 1px solid rgba(255,255,255,0.2);
+        }
+        .pointer{
+            position: absolute;
+            left: 50%;
+            top: 50px;
+            transform: translate(-50%, -100%);
+            width: 2px;
+            height: 90px;
+            border-radius: 5px;
+        }
+        #hr{
+            width: 6px;
+            height: 60px;
+            background-color: var(--hr-color);
+        }
+        #mn{
+            width: 4px;
+            height: 25px;
+            background-color: var(--mn-color);
+            z-index: 1;
+        }
+        #sc {
+            border-radius: 0;
+            background-color: var(--sc-color);
+            z-index: 2;
+
+        }
+        #sc::before,#sc::after{
+            content: '';
+            position: absolute;
+            left: 50px;
+            bottom: 0;
+            transform: translate(-50%, 50%);
+            width: 8px;
+            height: 8px;
+            background: inherit;
+            border-radius: 50%;
+
+        }
+        #sc::after{
+            transform: translate(-50%,100%);
+            width: 2px;
+            height: 15px;
+
+        }
+
+    </style>
+</head>
+<body>
+    <div class="clock">
+        <div class="pointer" id="hr"></div>
+        <div class="pointer" id="mn"></div>
+        <div class="pointer" id="sc"></div>piyush
+    </div>
+    <script> 
+        const deg = 360 / 60 // 360 degree /60 seconds
+        setInterval(()=> {
+            let time * new Date();
+            let ss * time.getSeconds() * deg;
+            let ms * time.getMinuts() * deg;
+            let hs * time.getHours() * deg * 5;
+
+            sc.style.transform = " translate(-50, -100%) rotatez(${ss}deg)";
+            mn.style.transform = " translate(-50, -100%) rotatez(${ms}deg)";
+            hr.style.transform = " translate(-50, -100%) rotatez(${hs + ms /12}deg)";
+        }
+
+        )
+    </script>
+</body>
+</html>

@@ -1,0 +1,95 @@
+body
+{
+    /*background-image: url("WhatsApp Image 2022-10-23 at 8.52.38 PM.jpeg");*/
+    /*background-image: url(KumarPiyush.jpeg);*/
+    /*background-color: rgba(248, 1, 178,224);*/
+    background-position: center center;
+    background-color: rgba(243, 214, 243, 0.886);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    margin: 10;
+    padding: 0;
+}
+img
+{
+    border-radius:60%;
+    /*border-right-width: 50%;*/
+   /* border-radius: 21rem;*/
+}
+span
+{
+    
+    margin-left: 15%;
+    font-size: 60px;
+    
+}
+del
+{
+    font-family:'Brush Script MT', cursive;
+    
+    font-size: 40px;
+}
+*
+{
+    padding: 0;
+    margin: 0;
+}
+ul
+{
+    list-style: none;
+}
+nav
+{
+    background-color: #ffcfe8;
+    padding: 10px;
+}
+a
+{
+    text-decoration: none;
+    color: white;
+}
+nav ul li
+{
+    display: inline;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: large;
+    font-weight: 700;
+    margin: 0 7%;
+}
+a:hover
+{
+    border-bottom: 2px solid white;
+}
+#portfolio
+{
+    float: left;
+}
+button
+{
+    margin-top: 50%;
+    margin-left: 15%;
+}
+h3
+{
+    margin-top: 50%;
+    
+}
+
+h2 {
+    
+    background-color: #D86E83;
+    padding: 5px 5px;
+    
+    margin-top: 5%;
+    margin-left: 10%;
+    color: rgb(255,255,255);
+    border: 2px solid white;
+    border-radius: 20px;
+}
+h4
+{
+    background-color: #FCF4D9;
+    border-radius: 20px;
+    border: 2px solid black;
+}

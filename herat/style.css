@@ -1,0 +1,76 @@
+#heart
+{
+    position: relative;
+    width: 100px;
+    height: 90px;
+}
+#heart:before,#heart:after
+{
+    position: absolute;
+    content: "";
+    left: 50%;
+    top: 100%;
+    width: 50px;
+    height: 80px;
+    background: red;
+    border-radius: 50px 50px 0 0;
+    transform: rotate(-45deg);
+    transform-origin: 0 100%;
+}
+#heart:after
+{
+    left: 0;
+    transform: rotate(45deg);
+    transform-origin: 100% 100%;
+}
+#egg
+{
+    text-align: center;
+    align-items: center;
+    display: block;
+    width: 126px;
+    height: 180px;
+    background-color: #ede8d5;
+    border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+}
+p
+{
+    text-align: center;
+}
+#infinity
+{
+    position: relative;
+    width: 212px;
+    height: 100px;
+    box-sizing: content-box;
+  
+}
+#infinity:before,#infinity:after
+{
+    content: "";
+    box-sizing: content-box;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 60px;
+    height: 60px;
+    border: 20px solid greenyellow;
+    border-radius: 50px 50px 0 50px;
+    transform: rotate(-10deg);
+}
+#infinity
+{
+    left: auto;
+    right: 0;
+    border-radius: 50px 50px 50px 0;
+    transform: rotate(10deg);
+}
+#chess
+{
+    height: 400px;
+    width: 400px;
+    background: conic-gradient(
+        #fff 0.25turn,#000 0.25turn 0.5turn,#fff 0.5turn 0.75turn,#000 0.75turn) top left / 25% 25% repeat;
+    border: 2px solid;
+
+}

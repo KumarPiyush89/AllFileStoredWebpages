@@ -1,0 +1,139 @@
+:root {
+
+    --eyeSize: 90px;
+
+    --eye-margin: 30px;
+
+    --eyeColor: #5DCCF4;
+
+    --borderColor: #000000;
+
+    --backgroundColor: lightpink;
+
+  }
+
+  body {
+
+    margin: 0;
+
+    display: flex;
+
+    justify-content: center;
+
+    flex-wrap: wrap;
+
+    background-color: #45011a;
+
+    overflow: hidden;
+
+    width: 100vw;
+
+    height: 100vh;
+
+  }
+
+  * {
+
+    box-sizing: border-box;
+
+  }
+
+  .eye-wrapper {
+
+    width: var(--eyeSize);
+
+    height: var(--eyeSize);
+
+    border-radius: 50%;
+
+    background: radial-gradient(circle at 50% 40%, white, white 60%, black 100%);
+
+    margin: var(--eye-margin);
+
+    position: relative;
+
+  }
+
+  .eye {
+
+    width: 100%;
+
+    height: 100%;
+
+    border-radius: 50%;
+
+    border: solid 2px var(--borderColor);
+
+    overflow: hidden;
+
+    display: flex;
+
+    justify-content: center;
+
+  }
+
+  .eye-ball {
+
+    width: calc(var(--eyeSize) / 1.7);
+
+    height: calc(var(--eyeSize) / 1.7);
+
+    border-radius: 50%;
+
+    background: radial-gradient(circle at 50% 50%, var(--eyeColor) 40%, var(--borderColor) 90%);
+
+    margin-top: -3px;
+
+    border: solid 2px var(--borderColor);
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+  }
+
+  .eye-iris {
+
+    width: 50%;
+
+    height: 50%;
+
+    border-radius: 50%;
+
+    background: var(--borderColor);
+
+  }
+
+  .eye-wrapper:hover .eye {
+
+    transform: rotate(0);
+
+    align-items: center;
+
+  }
+
+  .eye-wrapper:hover .eye-ball {
+
+    margin: 0;
+
+  }
+
+  .light {
+
+    position: absolute;
+
+    width: 20px;
+
+    height: 20px;
+
+    background: radial-gradient(circle at 50% 50%, white 10%, transparent 50%);
+
+    border-radius: 50%;
+
+    top: 20%;
+
+    right: 20%;
+
+  }

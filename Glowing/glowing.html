@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Glowing</title>
+    <style>
+        *{
+            margin: 0;
+            padding:0 ;
+        }
+        body
+        {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            min-height: 100vh;
+            background: #000;
+            overflow: hidden;
+        }
+        .glowing
+        {
+            position: relative;
+            min-width: 700px;
+            height: 550px;
+            margin: -150px;
+            transform-origin: right;
+            animation: colorChange 5s linear infinite;
+        }
+        .glowing:nth-child(even)
+        {
+            transform-origin: left;
+        }
+        @keyframes colorChange
+        {
+            0%{
+                filter: hue-rotate(0deg);
+                transform: rotate(0deg);
+            }
+            100%
+            {
+                filter: hue-rotate(360degg);
+                transform: rotate(360deg);
+            }
+        }
+        .glowing span
+        {
+            position: absolute;
+            top: calc(80px * var(--1));
+            left: calc(80px * var(--1));
+            bottom: calc(80px * var(--1));
+            right: calc(80px * var(--1));
+        }
+        .glowing span::before
+        {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: -8px;
+            width: 15px;
+            height: 15px;
+            background: #f00;
+            border-radius: 50%;
+
+        }
+        .glowing span:nth-child(3n + 1)::before
+        {
+            background: rgba(134, 255, 0, 1);
+            box-shadow: 0 0 20px rgba(134, 255, 0, 1),
+            0 0 40px  rgba(134, 255, 0, 1),
+            0 0 60px  rgba(134, 255, 0, 1),
+            0 0 80px  rgba(134, 255, 0, 1),
+            0 0 0 8px  rgba(134, 255, 0, .1);
+        }
+        .glowing span:nth-child(3n + 2)::before
+        {
+            background: rgba(255, 214, 0, 1);
+            box-shadow: 0 0 20px rgba(255, 214, 0, 1),
+            0 0 40px  rgba(255, 214, 0, 1),
+            0 0 60px  rgba(255, 214, 0, 1),
+            0 0 80px  rgba(255, 214, 0, 1),
+            0 0 0 8px  rgba(255, 214, 0, .1);
+        }
+        .glowing span:nth-child(3n + 3)::before
+        {
+            background: ;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="glowing">
+        <span style="--i:1"></span>
+        <span style="--i:2"></span>
+        <span style="--i:3"></span>
+    </div>
+    <div class="glowing">
+        <span style="--i:1"></span>
+        <span style="--i:2"></span>
+        <span style="--i:3"></span>
+    </div>
+    <div class="glowing">
+        <span style="--i:1"></span>
+        <span style="--i:2"></span>
+        <span style="--i:3"></span>
+    </div>
+    <div class="glowing">
+        <span style="--i:1"></span>
+        <span style="--i:2"></span>
+        <span style="--i:3"></span>
+    </div>
+    <div class="glowing">
+        <span style="--i:1"></span>
+        <span style="--i:2"></span>
+        <span style="--i:3"></span>
+    </div>
+    <div class="glowing">
+        <span style="--i:1"></span>
+        <span style="--i:2"></span>
+        <span style="--i:3"></span>
+    </div>
+    
+</body>
+</html>

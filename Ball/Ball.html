@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ball</title>
+    <style>
+        body
+        {
+            margin: 0;
+            padding: 0;
+            background: #000000;
+        }
+        .container
+        {
+            width: 200px;
+            height: 100px;
+            padding-top: 100px;
+            margin: 0 auto;
+        }
+        .ball
+        {
+            width: 10px;
+            height: 10px;
+            margin: 10px auto;
+            border-radius: 50px;
+        }
+        .ball:nth-child(1)
+        {
+            background: #ffffff;
+            --webkit-animation:right 1s infinite ease in out ;
+            --moz-animation: right 1s infinite ease-in-out;
+            animation: right 1s infinite ease-in-out;
+        }
+        .ball:nth-child(2)
+        {
+            background: #ffffff;
+            --webkit-animation:left 2s infinite ease in out ;
+            --moz-animation: left 2s infinite ease-in-out;
+            animation: left 2s infinite ease-in-out;
+        }
+        .ball:nth-child(3)
+        {
+            background: #ffffff;
+            --webkit-animation:right 3s infinite ease in out ;
+            --moz-animation: right 3s infinite ease-in-out;
+            animation: right 3s infinite ease-in-out;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="ball"></div>
+        <div class="ball"></div>
+        <div class="ball"></div>
+        <div class="ball"></div>
+        <div class="ball"></div>
+        <div class="ball"></div>
+        <div class="ball"></div>
+    </div>
+</body>
+</html>

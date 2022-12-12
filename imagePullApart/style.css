@@ -1,0 +1,60 @@
+html,
+body {
+  width: 100%;
+  min-height: 100%;
+  margin: 0;
+  background: #17181d;
+  padding: 0;
+  position: relative;
+  overflow: hidden;
+}
+
+body {
+  position: relative;
+  -ms-scroll-chaining: none;
+  overscroll-behavior: contain;
+}
+body.zoomed,
+body.loading {
+  overflow: hidden;
+}
+
+.page {
+  z-index: 3;
+  position: relative;
+  margin: 0;
+}
+.page.under {
+  z-index: 1;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  cursor: -webkit-grab;
+  cursor: grab;
+}
+
+.info {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 200;
+  pointer-events: none;
+  right: 0;
+  bottom: 0;
+}
+.info svg {
+  opacity: 0;
+  width: clamp(50px, 5vw, 120px);
+  height: clamp(50px, 5vw, 120px);
+  transform: translateX(150%);
+}
