@@ -1,0 +1,49 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <!-- CSS only -->
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+      <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+    <title>Document</title>
+    <script>
+        function setValueToD()
+        {
+            var now=new Date();
+            document.getElementById("d").innerHTML=now.getDate()+"/"+(now.getMonth()+1)+"/"+now.getFullYear()+" "+now.getHours()+":"+now.getMinutes()+":"+now.getSeconds();
+        }
+        var q=["Work is worship",
+    
+    "<img src='7411d3bd-a361-4c37-a208-a3de29f09edc.jpg'  height=\"300px\" width=\"100%\"/> ",
+    "<img src='PIYUSH.png'  height=\"300px\" width=\"100%\"/>",
+    "<img src='maxresdefault.jpg' height=\"300px\" width=\"100%\"/>",
+    "<img src='IMG-20220627-WA0000.jpg'height=\"300px\" width=\"100%\"/>",
+    "<img src='Happy.jpg'  height=\"300px\" width=\"100%\"/>",
+    ];
+    function setQuotationToQ()
+    {
+        //get a random number between 0 and total number of quotations
+        var rn=Math.floor(Math.random()*q.length);
+        document.getElementById("Q").innerHTML=q[rn];
+    }
+    </script>
+    
+
+</head>
+<div class="container-fluid"><div class="row"><div class="col-sm-5 bg-info"></div><div class="col-sm-2 bg-danger">
+<body onload="setValueToD();setInterval(setValueToD,1000);setQuotationToQ();setInterval(setQuotationToQ,2000);">
+    <h1 id="d" style="text-align: center;"></h1>
+    <h1 id="Q" style="text-align:center;"></h1>
+    
+</body></div>
+<div class="col-sm-5 bg-info"></div>
+</div></div>
+
+
+
+
+</html>
