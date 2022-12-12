@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Water Wave</title>
+    <style>
+        .container{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100vw;
+            height: 100vh;
+        }
+        .circle
+        {
+            height: 150px;
+            width: 150px;
+            background-color: #ccc;
+            border: 5px solid #fff;
+            box-shadow: 0 0 0 5px #FC036B;
+            border-radius: 50%;
+            overflow: hidden;
+        }
+        .wave
+        {
+            position: relative;
+            height: 100%;
+            width: 100%;
+            background-color: #FC036B;
+            border-radius: 50%;
+            box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.5);
+        }
+        .wave::before
+        .wave::after
+        {
+            content: '';
+            height: 200%;
+            width: 200%;
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translate(-50%, -75%);
+            animation: animate 7s linear infinite;
+
+        }
+        .wave::before
+        {
+            background-color: rgba(255, 255,255,0.5);
+            border-radius: 40%;
+        }
+        .wave::after
+        {
+            background-color: #fff;
+            border-radius: 45%;
+        }
+        @keyframes animate 
+        {
+            0%
+            {
+                transform: translate(-50%,-75%) rotate(0deg);
+            }
+            100%
+            {
+                transform: translate(-50%,-75%) rotate(360deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="circle">
+            <div class="wave"></div>
+        </div>
+    </div>
+</body>
+</html>

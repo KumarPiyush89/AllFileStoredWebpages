@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Animation</title>
+    <style>
+        
+        .wrapper
+        {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .wrapper h1 
+        {
+            margin: 0;
+            font-size: 150px;
+            color: rgba(255, 255, 255, 0.01);
+            background-image: url("piyush.jpg");
+            background-repeat: repeat;
+            -webkit-background-clip: text;
+            animation: animate 15s ease-in-out infinite;
+            text-align: center;
+            text-transform: uppercase;
+            font-weight: 900;
+        }
+        @keyframes animate
+        {
+            0%,100% 
+            {
+                background-position: left top;
+            }
+            25%
+            {
+                background-position: right bottom;
+            }
+            50%
+            {
+                background-position: left bottom;
+            }
+            75%
+            {
+                background-position: right top;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <h1>KUMAR PIYUSH</h1>
+    </div>
+    
+</body>
+</html>

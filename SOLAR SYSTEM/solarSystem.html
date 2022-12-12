@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            SOLAR SYSTEM
+        </title>
+        <style>
+            *
+            {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+                
+               
+            }
+            .container
+            {
+                display:flex;
+                background-color:#1a0a15;
+                width: 100vw;
+                height:100vh;
+                justify-content: center;
+                align-items: center;
+                overflow: hidden;
+            }
+            .system
+            {
+                position: relative;
+                width: 100%;
+                max-width: 700px;
+                padding-top: 100%;
+            }
+            @media (min-width:700px)
+            {
+                .system{
+                    padding-top: 700px;
+                }
+            }
+            .system_sun
+            {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%,-50%);
+               
+            }
+            
+            
+            .system_icon
+            {
+                width: 100%;
+                height: 100%;
+            }
+            .system_planet
+            {
+                position: absolute;
+                top: 50%;
+                left: -15px;
+                width: 25px;
+                height: 25px;
+                transform: translateY(-50%);
+            }
+            .system_orbit
+            {
+                position: absolute;
+                border: 1.5px solid rgba(255,255,255,0.3);
+                border-radius: 100%;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                animation: spin infinite linear both;
+            }
+            .system_orbit-SUN
+            {
+                width: calc(10%);
+                height: calc(10%);
+                border: none;
+                animation-duration: 10s;
+            }
+            .system_orbit-MERCURY
+            {
+                width: calc(20%);
+                height: calc(20%);
+                animation-duration: 2s;
+            }
+            .system_orbit-VENUS
+            {
+                width: calc(30%);
+                height: calc(30%);
+                animation-duration: 5s;
+            }
+            .system_orbit-EARTH
+            {
+                width: calc(40%);
+                height: calc(40%);
+                animation-duration: 9s;
+            }
+            .system_orbit-MARS
+            {
+                width: calc(50%);
+                height: calc(50%);
+                animation-duration: 13s;
+            }
+            .system_orbit-JUPITER
+            {
+                width: calc(60%);
+                height: calc(60%);
+                animation-duration: 49.8s;
+            }
+            .system_orbit-SATURN
+            {
+                width: calc(70%);
+                height: calc(70%);
+                animation-duration: 120.3s;
+            }
+            .system_orbit-URANES
+            {
+                width: calc(80%);
+                height: calc(80%);
+                animation-duration: 200s;
+            }
+            .system_orbit-NEPTUNE
+            {
+                width: calc(90%);
+                height: calc(90%);
+                animation-duration: 300s;
+            }
+            .system_orbit-PLUTO
+            {
+                width: calc(100%);
+                height: calc(100%);
+                animation-duration: 400s;
+            }
+            @keyframes spin 
+            {
+                from
+                {
+                    transform: translate(-50%, -50%);
+                }
+                to
+                {
+                    transform: translate(-50%, -50%) rotate(360deg);
+                }
+            }
+            
+            p{
+                color: white;
+            }
+            
+
+        </style>
+    </head>
+    <body>
+        
+        <div class="container">
+            <div class="system">
+            <div class="system_orbit system_orbit-sun">
+                <img src="SUN.jpg" alt="Sun" title="Sun" class="system_icon" style="border-radius: 100%; height: 100px; width: 100px;">
+            </div>
+            <div class="system_orbit system_orbit-MERCURY">
+                <div class="system_planet">
+                <img src="MERCURY.jpg" alt="MERCURY" title="MERCURY" class="system_icon">
+                <p>MERCURY</p>
+            </div>
+            </div>
+            <div class="system_orbit system_orbit-VENUS">
+                <div class="system_planet">
+                <img src="VENUS.jpg" alt="VENUS" title="VENUS" class="system_icon">
+            </div>
+            </div>
+            <div class="system_orbit system_orbit-EARTH">
+                <div class="system_planet">
+                <img src="EARTH.jpg" alt="EARTH" class="system_icon" title="EARTH">
+            </div>
+            </div>
+            <div class="system_orbit system_orbit-MARS">
+                <div class="system_planet">
+                <img src="MARS.jpg" alt="MARS" class="system_icon" title="MARS">
+            </div>
+            </div>
+            <div class="system_orbit system_orbit-JUPITER">
+                <div class="system_planet">
+                <img src="JUPITER.jpg" alt="JUPITER" class="system_icon" title="JUPITER">
+            </div>
+            </div>
+            <div class="system_orbit system_orbit-SATURN">
+                <div class="system_planet">
+                <img src="SATURN.jpg" alt="SATURN" class="system_icon" title="SATURN">
+            </div>
+            </div>
+            <div class="system_orbit system_orbit-URANES">
+                <div class="system_planet">
+                <img src="URANES.jpg" alt="URANES" class="system_icon" title="URANES">
+            </div>
+            </div>
+            <div class="system_orbit system_orbit-NEPTUNE">
+                <div class="system_planet">
+                <img src="NEPTUNE.jpg" alt="NEPTUNE" class="system_icon" title="NEPTUNE">
+            </div>    
+            </div>
+            <div class="system_orbit system_orbit-PLUTO">
+                <div class="system_planet">
+                <img src="pluto.jpg" alt="pluto" class="system_icon" title="pluto">
+            </div>
+            </div>
+        </div>
+        </div>
+    </body>
+</html>
