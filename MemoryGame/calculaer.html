@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <style type="text/css">
+
+            .calc {
+                text-align: center;
+                font-family: Arial, Helvetica, sans-serif;
+                width: 215px;
+                justify-content: center;
+                background: gray;
+                padding: 5px;
+                border-radius: 15px;
+                padding-top: 10px;
+            }
+
+            button {
+                text-align: center;
+                left: 10px;
+                margin: auto 0 4px 4px;
+                width: 45px;
+                border-radius: 5pc;
+                border-style: offset;
+                background: linear-gradient(-10deg, grey, black);
+                color: white;
+                font-weight: bold;
+                border: solid ridge;
+                box-shadow: 0 1px 1px 1px grey;
+
+            }
+
+            button:active {
+                background: linear-gradient(180deg, grey, black);
+                box-shadow: 0 1px 1px 1px red;
+                text-align: center;
+
+            }
+
+            #num {
+                padding: 15px;
+                text-align: center;
+                margin: 0 10px 10px 5px;
+                margin-right: 10px;
+                border-radius: 10px;
+                color: black;
+                font-weight: bold;
+                border-style: inset;
+                font-size: larger;
+                width: 169px;
+                font-family: "Lucida Console", Monaco, monospace;
+
+            }
+
+            sup {
+                font-size: 5px;
+                text-align: center;
+
+            }
+
+            #ac, #del {
+                background: linear-gradient(-10deg,red, black);
+                text-align: center;
+            }
+
+            .function-keys {
+                text-align: center;
+                background: linear-gradient(-10deg,green, black);
+            }
+
+            .operation-keys {
+                text-align: center;
+                background: linear-gradient(-10deg, blue, black);
+            }
+            body{
+                text-align: justify;
+            }
+        </style>
+
+        <script type="text/javascript">
+            function deleteDigit() {
+
+                document.getElementById('num').value = Math.floor(document.getElementById('num').value/10);
+
+            }
+        </script>
+
+    </head>
+    <body>
+        <div class="calc">
+
+            <div> <!-- the calclator display -->
+                <input type="text" id="num" disabled="disabled" />
+            </div>
+
+            <div>
+                <button onclick="num.value+=1">1</button>
+                <button onclick="num.value+=2">2</button>
+                <button onclick="num.value+=3">3</button>
+                <button onclick="num.value+='+'" class="operation-keys">+</button>
+            </div>
+
+            <div>
+                <button onclick="num.value+=4">4</button>
+                <button onclick="num.value+=5">5</button>
+                <button onclick="num.value+=6">6</button>
+                <button onclick="num.value+='-'" class="operation-keys">-</button>
+            </div>
+
+            <div>
+                <button onclick="num.value+=7">7</button>
+                <button onclick="num.value+=8">8</button>
+                <button onclick="num.value+=9">9</button>
+                <button onclick="num.value+='*'" class="operation-keys">x</button>
+            </div>
+
+            <div>
+                <button onclick="num.value*=num.value" class="function-keys">x<sup>2</sup></button>
+                <button onclick="num.value+=0">0</button>
+                <button onclick="num.value=Math.sqrt(num.value)" class="function-keys">√</button>
+                <button onclick="num.value+='/'" class="operation-keys">÷</button>
+            </div>
+
+            <div>
+                <button onclick="num.value+='**'" class="function-keys">x<sup>y</sup></button>
+                <button onclick="num.value=''" id="ac">AC</button>
+                <button onclick="deleteDigit()" id="del">DEL</button>
+                <button onclick="num.value=eval(num.value)">=</button>
+            </div>
+
+        </div>
+    </body>
+</html>

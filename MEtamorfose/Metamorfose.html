@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>METAMORFOSE</title>
+    <style>
+        html,body{
+            height: 98vh;
+        }
+        body{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            background-color: #020e26;
+        }
+        h1{
+            position: absolute;
+            color: #ffffff;
+            font-size: 120px;
+            transform:  translate(-50%,-50%);
+            animation: morph-effect 10s infinite ease-in-out;
+        }
+        h1:nth-child(1)
+        {
+            animation-delay: -5s;
+        }
+        h1:nth-child(2)
+        {
+            animation-delay: -30s;
+        }
+        h1:nth-child(3)
+        {
+            animation-delay: -70s;
+        }
+        
+        @keyframes morph-effect
+        {
+            0%, 20%, 100% {
+                filter: blur(0px);
+                opacity: 2;
+            }
+            40%, 80%
+            {
+                filter: blur(16px);
+                opacity: 1;
+            }
+            60%
+            {
+                filter: blur(32px);
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1> How are you ?</h1>
+        <h1>Hello Piyush</h1>
+        
+        
+        
+    </div>
+</body>
+</html>

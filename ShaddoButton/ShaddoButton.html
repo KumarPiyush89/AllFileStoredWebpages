@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShaddoButton</title>
+    <style>
+        body
+        {
+            background-color: black;    
+            
+        }
+        .shadoBtn{
+            width: 120px;
+            height: 60px;
+            border-radius: 10px;
+            border: 2px solid white;
+            background-color: transparent;
+            color: white;
+            cursor: pointer;
+            position: relative;
+            left: 50%;
+            top: 50%;
+            
+        }
+        .shadoBtn:hover
+        {
+            background-color: white;
+            color: black;
+            transition: ls ease;
+            top: 50%;
+        }
+        .shadoBtn::before
+        {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 50%;
+            background: transparent;
+            height: 50%;
+            width: 100%;
+            transform: perspective(lem) rotateX(40deg) scale(1, 0.35);
+            filter: blur(8px);
+            transition: ls ease;
+        }
+        .shadoBtn:hover::before
+        {
+            background: white;
+            top: 70%;
+            
+        }
+    </style>
+</head>
+<body>
+    <button class="shadoBtn">
+        .Kumar-Piyush
+    </button>
+    
+</body>
+</html>

@@ -1,0 +1,82 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #8e24aa;
+  }
+  
+  ul {
+    width: 340px;
+    height: 80px;
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+  }
+  
+  li {
+    display: flex;
+    justify-content: center;
+    position: relative;
+  }
+  li:before {
+    content: "";
+    width: 6px;
+    height: 90px;
+    background: #ed40fb;
+    position: absolute;
+    top: -5px;
+    border-radius: 90px;
+  }
+  
+  span {
+    width: 20px;
+    height: 20px;
+    background: #ed40fb;
+    border-radius: 50%;
+    box-shadow: 0 0 20px -5px rgba(0, 0, 0, 0.3);
+    display: block;
+    animation: move 1s ease-in-out infinite alternate;
+  }
+  span.ball1 {
+    animation-delay: 0.2s;
+  }
+  span.ball2 {
+    animation-delay: 0.4s;
+  }
+  span.ball3 {
+    animation-delay: 0.6s;
+  }
+  span.ball4 {
+    animation-delay: 0.8s;
+  }
+  span.ball5 {
+    animation-delay: 1s;
+  }
+  span.ball6 {
+    animation-delay: 1.2s;
+  }
+  span.ball7 {
+    animation-delay: 1.4s;
+  }
+  span.ball8 {
+    animation-delay: 1.6s;
+  }
+  span.ball9 {
+    animation-delay: 1.8s;
+  }
+  span.ball10 {
+    animation-delay: 2s;
+  }
+  
+  @keyframes move {
+    100% {
+      transform: translateY(58px);
+    }
+  }
+  

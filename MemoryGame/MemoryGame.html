@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Memory Game</title>
+    <script >
+
+        document.addEventListener('DOMContentLoaded', ()=>{
+        
+        // Card Option
+        
+        const cardArray = [
+            {
+                name : 'fries',
+                img  : 'fries.jfif' },
+            {
+                name : 'fries',
+                img  : 'fries.jfif'   },
+            {
+                name : 'cheeseburger',
+                img  : 'cheeseburger.jfif'    },
+            {
+                name : 'cheeseburger',
+                img  : 'cheeseburger.jfif'    },
+            {
+                name : 'hotdog',
+                img  : 'dog.jfif'  },
+            {
+                name : 'hotdog',
+                img  : 'dog.jfif'  },
+            {
+                name : 'ice-cream',
+                img  : 'ice-cream.jfif'   },
+            {
+                name : 'ice-cream',
+                img  : 'ice-cream.jfif'   },
+            {
+                name : 'milkshake',
+                img  : 'milk-shake.jfif'   },
+            {
+                name : 'milkshake',
+                img  : 'milk-shake.jfif'   },
+            {
+                name : 'pizza',
+                img  : 'pizza.jfif'   },
+            {
+                name : 'pizza',
+                img  : 'pizza.jfif'   }
+        ]
+        
+        cardArray.sort(() => 0.5 - Math.random());
+        
+        const grid = document.querySelector(".grid");
+        let result = document.getElementById("result");
+        var cardChoosen = [];
+        var cardChoosenId = [];
+        var cardWon = [];
+        
+        // create board
+        function createBoard() {
+            for(let i=0; i<cardArray.length; i++){
+                var card = document.createElement('img');
+                card.setAttribute('src', '/Image/blank.png');
+                card.setAttribute('data-id', i);
+                card.addEventListener('click',flipCard);
+                grid.appendChild(card);
+            }
+        }
+        
+        // check for maches
+        function checkForMatch(){
+            var cards = document.querySelectorAll('img');
+        
+            var oneImg = cardChoosenId[0];
+            var twoImg = cardChoosenId[1];
+        
+            if(cardChoosen[0] === cardChoosen[1]){
+                alert("You found a match");
+                cards[oneImg].setAttribute('src', '/Image/white.png');
+                cards[twoImg].setAttribute('src', '/Image/white.png');
+                cardWon.push(cardChoosen);
+            }
+            else{
+                cards[oneImg].setAttribute('src', '/Image/blank.png');
+                cards[twoImg].setAttribute('src', '/Image/blank.png');
+                alert("Sorry Try Again");
+            }
+        
+            cardChoosen = [];
+            cardChoosenId = [];
+        
+            result.innerHTML = cardWon.length;
+        
+            if(cardWon.length == cardArray.length/2){
+                alert("Congratulation! You Get All Match");
+            }
+        }
+        
+        // flip card
+        function flipCard(){
+            var cardId = this.getAttribute('data-id');
+            cardChoosen.push(cardArray[cardId].name);
+            cardChoosenId.push(cardId);
+            this.setAttribute('src',cardArray[cardId].img);
+        
+            if(cardChoosen.length === 2){
+                setTimeout(checkForMatch, 500);
+            }
+        }
+        
+        
+        createBoard();
+        })
+        </script>
+    <style>
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: rgb(255, 173, 218);
+}
+
+.main-div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 90vh;
+}
+.container{
+    position: relative;
+    background-color: rgb(101, 174, 223);
+    width:500px;
+    height: 450px;
+    border-radius: 0.8rem;
+}
+h1{
+    margin: 2rem;
+}
+.grid{
+    margin: 1rem auto;
+    display: flex;
+    flex-wrap: wrap;
+    height: 300px;
+    width: 400px;
+}
+    </style>
+</head>
+<body>
+    <div class="main-div">
+        <div class="container">
+            <h1>Score : <span id="result">0</span></h1>
+            <div class="grid">
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

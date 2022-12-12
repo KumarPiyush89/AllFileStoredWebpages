@@ -1,0 +1,217 @@
+:root {
+  --gap: 15px;
+  --key-width: 50px;
+}
+
+body {
+  margin: 0;
+  overflow: hidden;
+  background-color: #0a0a0a;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+.keyboard {
+  --rot-x: 20deg;
+  --rot-y: 0deg;
+  display: inline-flex;
+  flex-direction: column;
+  padding: var(--gap);
+  border-radius: 17.5px;
+  transform-style: preserve-3d;
+  perspective: 1200px;
+  transform: perspective(1200px) rotateX(var(--rot-x)) rotateY(var(--rot-y));
+  transition: 100ms transform;
+}
+.row {
+  display: flex;
+  transform-style: preserve-3d;
+}
+.row + .row {
+  margin-top: var(--gap);
+}
+
+.keyboard,
+.key {
+  background: #141414;
+  border: 2px solid rgba(64, 64, 64, 0.2);
+  box-shadow: -5px -5px 10px rgba(255, 255, 255, 0.01), -2px -2px 6px rgba(255, 255, 255, 0.03), 2px 2px 5px rgba(0, 0, 0, 0.3), 5px 5px 10px rgba(0, 0, 0, 0.3);
+}
+
+.key {
+  --width: var(--key-width);
+  --color: hsl(0, 0%, 97%);
+  --size: 1;
+  --size-2: 1.654545;
+  --size-3: 1.981818;
+  --size-4: 2.290909;
+  --size-5: 2.618181;
+  --size-6: 1.327272;
+  --size-7: 7.0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: calc(var(--width) * var(--size));
+  height: var(--width);
+  border-radius: 7.5px;
+  flex-shrink: 0;
+  box-sizing: border-box;
+  transform: translate3D(0, 0, 30px);
+  transition: 100ms;
+  cursor: pointer;
+}
+.key:hover {
+  transform: translate3D(0, 0, 35px);
+}
+.key:active, .key[data-selected]:not([data-selected=false]) {
+  transform: translate3D(0, 0, 25px);
+  border-color: var(--color);
+  box-shadow: -5px -5px 10px rgba(255, 255, 255, 0.01), -2px -2px 6px rgba(255, 255, 255, 0.03), 2px 2px 5px rgba(0, 0, 0, 0.3), 5px 5px 10px rgba(0, 0, 0, 0.3), 0px 2px 8px var(--color), 0px 5px 20px var(--color);
+}
+.key + .key {
+  margin-left: var(--gap);
+}
+.key:before {
+  display:flex;
+  width: 15px;
+  height: 15px;
+  border-radius: 7.5px;
+  background-color: white;
+}
+.key.stretch {
+  padding: 0 25px;
+}
+.key.stretch:before {
+  width: 100%;
+}
+.key.empty:before {
+  display: none;
+}
+.key.size-2 {
+  --size: var(--size-2);
+}
+.key.size-3 {
+  --size: var(--size-3);
+}
+.key.size-4 {
+  --size: var(--size-4);
+}
+.key.size-5 {
+  --size: var(--size-5);
+}
+.key.size-6 {
+  --size: var(--size-6);
+}
+.key.size-7 {
+  --size: var(--size-7);
+}
+.key.grey {
+  --color: hsl( 0, 0%, 50%);
+}
+.key.red {
+  --color: hsl( 0, 80%, 60%);
+}
+.key.orange {
+  --color: hsl( 25, 80%, 60%);
+}
+.key.yellow {
+  --color: hsl( 50, 80%, 60%);
+}
+.key.green {
+  --color: hsl(150, 80%, 60%);
+}
+.key.blue {
+  --color: hsl(210, 80%, 60%);
+}
+.key.purple {
+  --color: hsl(270, 80%, 60%);
+}
+.key[data-color=grey] {
+  --color: hsl( 0, 0%, 50%);
+}
+.key[data-color=red] {
+  --color: hsl( 0, 80%, 60%);
+}
+.key[data-color=orange] {
+  --color: hsl( 25, 80%, 60%);
+}
+.key[data-color=yellow] {
+  --color: hsl( 50, 80%, 60%);
+}
+.key[data-color=green] {
+  --color: hsl(150, 80%, 60%);
+}
+.key[data-color=darkblue] {
+  --color:#3b5998 ;
+}
+.key[data-color=pink] {
+  --color:#bc2a8d;
+}
+.key[data-color=lightblue] {
+  --color:#0077b5;
+}
+.key[data-color=blue] {
+  --color:#1DA1F2;
+}
+
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+
+p{
+    color: white;
+}
+
+#keyI{
+ background-image: url("https://cdn-icons-png.flaticon.com/128/2111/2111463.png");
+ background-repeat: no-repeat;
+ background-size: 48px 48px;
+}
+#keyW{
+  background-image: url("https://cdn-icons-png.flaticon.com/128/733/733585.png");
+  background-repeat: no-repeat;
+  background-size: 45px 48px;
+  background-color: white;
+}
+#keyF{
+  background-image: url("https://cdn-icons-png.flaticon.com/128/733/733547.png");
+  background-repeat: no-repeat;
+  background-size: 48px 48px;
+}
+#keyY{
+  background-image: url("https://cdn-icons-png.flaticon.com/128/1384/1384060.png");
+ background-repeat: no-repeat;
+ background-size: 45px 49px;
+ background-color: white;
+}
+#keyT{
+  background-image: url("https://cdn-icons-png.flaticon.com/512/733/733579.png");
+ background-repeat: no-repeat;
+ background-size: 45px 49px;
+ background-color: white;
+}
+#keyS{
+  background-image: url("https://cdn-icons-png.flaticon.com/512/1384/1384066.png");
+  background-repeat: no-repeat;
+  background-size: 48px 48px;
+}
+#keyWindow{
+  background-image: url("https://cdn-icons-png.flaticon.com/512/888/888882.png");
+  background-repeat: no-repeat;
+  background-size: 35px 35px;
+  background-position-x: 5px;
+  background-position-y: 5px;
+}
+#keyL{
+  background-image: url("https://cdn-icons-png.flaticon.com/512/3536/3536505.png");
+  background-repeat: no-repeat;
+  background-size: 45px 45px;
+}
