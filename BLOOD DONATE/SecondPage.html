@@ -1,0 +1,458 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+     <!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+<!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+<script>
+    function checkDoner()
+    {   
+       
+        // get the reference of all input elements
+        var groupIB=document.getElementById("group");
+        var finameIB=document.getElementById("finame");
+        var lanameIB=document.getElementById("laname");
+        var MonthIB=document.getElementById("Month");
+        var DayIB=document.getElementById("Day");
+        var YearIB=document.getElementById("Year");
+        var OccupationIB=document.getElementById("Occupation");
+        var PhoneIB=document.getElementById("Phone");
+        var EmailIB=document.getElementById("Email");
+        var Address1IB=document.getElementById("Address1");
+        var Address2IB=document.getElementById("Address2");
+        var Address3IB=document.getElementById("Address3");
+        var Address4IB=document.getElementById("Address4");
+        var Address5IB=document.getElementById("Address5");
+        var WeightIB=document.getElementById("Weight");
+        var PulseIB=document.getElementById("Pulse");
+        var AgeIB=document.getElementById("Age");
+        
+        var gender;
+
+
+        // Valid all Entered  Data
+        if(groupIB.value==="");
+        {
+            alert("Plese select your blood group");
+            groupIB.focus();
+        }
+        if(finameIB.value==="")
+        {
+            alert("First Name must be entered");
+            finameIB.focus();
+            return;
+        }
+        if(lanameIB.value==="")
+        {
+            alert("Last Name must be entered");
+            lanameIB.focus();
+            return;
+        }
+        if(Month.value==="")
+        {
+            alert("Plese entered month");
+            month.focus();
+            return;
+        }
+        if(Day.value==="")
+        {
+            alert("Plese entered Day");
+            Day.focus();
+            return;
+        }
+        if(Year.value==="")
+        {
+            alert("Plese entered Year");
+            Year.focus();
+            return;
+        }
+        if(OccupationIB.value==="");
+        {
+            alert("Plese entered Occupation");
+            OccupationIB.focus();
+            return;
+        }
+        /*if(Phone.value==="");
+        {
+            alert("Plese Enter valid Phone");
+            Phone.focus();
+            return;
+        }*/
+        /*if(Email.value==="");
+        {
+            alert("Plese enter valid Email");
+            Email.focus();
+            return;
+        }*/
+        if(WeightIB.value==="");
+        {
+            alert("plese enter weight")
+            Weight.focus();
+            return;
+        }
+        if(maleRadio.checked==true)
+            gender='m';
+        else
+            gender='f';
+        if(gender=='m')
+        {
+           if(weight<=50)
+                
+             {
+                r.innerHTML="OOPS! Mr. currently you are not eligible for Donate Blood.";
+                r.style.color="rgb(255,0,0)";
+            }
+        }
+            else
+        {
+            if(age<=45)
+                {
+                    r.innerHTML="OOPS! Miss currently you are not eligible for Donate Blood.";
+                    r.style.color="rgb(255,0,0)";
+                }
+        }    
+         if(Age==="");
+         {
+            alert("Plese Enter Age");
+            Age.focus();
+            return;
+         }
+         if(maleRadio.checked==true)
+            gender='m';
+        else
+            gender='f';
+        if(gender=='m')
+        {
+           if(Age<=18)
+                
+             {
+                r.innerHTML="OOPS! Mr. currently you are not eligible for Donate Blood.";
+                r.style.color="rgb(255,0,0)";
+            }
+        }
+            else
+        {
+            if(age<=18)
+                {
+                    r.innerHTML="OOPS! Miss currently you are not eligible for Donate Blood.";
+                    r.style.color="rgb(255,0,0)";
+                }
+        }     
+    }
+</script>
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="row">
+                <div class="col-sm-12 bg-primary">
+                <h1 class="text-center text-danger">FORM</h1>    
+                <br/><br/></div>
+            </div>
+            <div class="col-sm-3 bg-primary">
+                <p><img src="blood3.jpg" alt="" style="width: 100%;"/></p>
+                <p><img src="blood10.jpg" alt="" style="width: 100%;"/></p>
+                <p><img src="blood11.jpg" alt="" style="width: 100%;"/></p>
+                <p><img src="blood12.jpg" alt="" style="width: 100%;"/></p>
+                <p><img src="blood6.jpg" alt="" style="width: 100%;"/></p>
+                <p><img src="497909032-Blood_Donation.jpg" alt="" style="width: 100%;"/></p>
+                <p><img src="blood4.jpg" alt="" style="width: 100%;"/></p>
+                <p><img src="blood3.jfif" alt="" style="width: 100%;"/></p>
+                <p><img src="BLOOD2.jfif" alt="" style="width: 100%;"/></p>
+                <p><img src="desk.webp" alt="" style="width: 100%;"/></p>
+            </div>
+            <div class="col-sm-6">
+                <div class="row">
+                    <div class="col-sm-2">
+                        <p><img src="Blood6.png" alt="LOGO" style="width: 70%;" /></p>
+                    </div>
+                    <div class="col-sm-8">
+                        <h1 class="  text-danger text-center"><u>Blood</u> <u>Donation</u> <u>Form</u><hr/></h1>
+                        <b>Confidential -Plese answer the following questions correctly.<br/> 
+                            This will help to protect you and the patient who receives your blood. </b>
+                    </div><br/>
+                    <div class="col-sm-2">
+                        <p><img src="Blood6.png" alt="LOGO" style="width: 70%;" /></p>
+                    </div><hr/>
+                    <h2>What is your blood type ?</h2><br/>
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <p><input type="radio" value="o+" name="group"id="groupop"  autofocus /> &nbsp;<label>0 Rh+</label></p>
+                        </div>
+                        <div class="col-sm-6">
+                            <p><input type="radio" value="o-" name="group"id="groupon"/> &nbsp;<label>0 Rh-</label></p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <p><input type="radio" value="A+" name="group"id="groupap"/> &nbsp;<label>A Rh+</label></p>
+                        </div>
+                        <div class="col-sm-6">
+                            <p><input type="radio" value="A-" name="group"id="groupan"/> &nbsp;<label>A Rh-</label></p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <p><input type="radio" value="B+" name="group"id="groupbp"/> &nbsp;<label>B Rh+</label></p>
+                        </div>
+                        <div class="col-sm-6">
+                            <p><input type="radio" value="B-" name="group"id="groupbn"/> &nbsp;<label>B Rh-</label></p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <p><input type="radio" value="AB+" name="group"id="groupbabp"/> &nbsp;<label>AB Rh+</label></p>
+                        </div>
+                        <div class="col-sm-6">
+                            <p><input type="radio" value="AB-" name="group"id="groupabn"/> &nbsp;<label>AB Rh-</label></p>
+                        </div>
+                    </div><hr/>
+                    <br/><br/><br/>
+                    <h2>Full Name</h2>
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <p><input type="text" id="finame" class="form-control" placeholder="FIRST NUMBER"/><br/>First Name</p>
+                        </div>
+                        <div class="col-sm-6">
+                            <p><input type="text" id="laname" class="form-control" placeholder="LAST NAME"/><br/>Last Name</p>
+                        </div><br/>
+                    </div><hr/>
+                    <div class="row">
+                        <div class="col-sm-4">
+                            <p><input type="text" id="Month" class="form-control" placeholder="MONTH"/><br/>Month </p>
+                        </div>
+                        <div class="col-sm-4">
+                            <p><input type="text" id="Day" class="form-control" placeholder="DAY"/><br/>Day </p>
+                        </div>
+                        <div class="col-sm-4">
+                            <p><input type="text" id="Year" class="form-control" placeholder="YEAR"/><br/>Year</p>
+                        </div>
+                    </div><hr/>
+                    <h2>Gender &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Occupation</h2>
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <label>Gender:</label><input type="radio" value="m" name="gender" checked id="mr"/><label>Male</label>
+                            <input type="radio" value="f" name="gender" id="fr"><label>Female</label>
+                        </div>
+                        
+                        <div class="col-sm-6">
+                            <p><input type="text" id="Occupation" class="form-control" placeholder="OCCUPATION"/><br/></p>
+                        </div><hr/>
+                    </div>
+                    <h2>Phone Number &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Email</h2>
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <p><input type="number" id="Phone" class="form-control" placeholder="(000) 000-0000"/><br/>Plese enter a valid phone number</p>
+                        </div>
+                        <div class="col-sm-6">
+                            <p><input type="email"  id="Email" class="form-control" placeholder="example@example.com"/><br/></p><p>example@example.com</p>
+                        </div><hr/>
+                    </div><br/><h1>Address</h1>
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <p><input type="text" id="Address1" class="form-control" placeholder="ADDRESS"/></p><p>street Address</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <p><input type="text" id="Address2" class="form-control" placeholder="ADDRESS"/></p><p>street Address Line 2</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <p><input type="text" id="Address3" class="form-control" placeholder="CITY"/></p><p>City</p>
+                        </div>
+                        <div class="col-sm-6">
+                            <input type="text" id="Address4" class="form-control" placeholder="STATE"/><p>State / Province</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <input type="text" id="Address5" class="form-control" placeholder="ZIP CODE"/><p>Postal / Zip Code</p>
+                        </div>
+                    </div><hr/>
+                    <h2>Weight &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Age</h2>
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <input type="text" id="Weight" class="form-control" placeholder="WEIGHT"/>
+                        </div>
+                        <div class="col-sm-6">
+                            <input type="text" id="Age" class="form-control" placeholder="Age"/>
+                        </div>
+                    </div>
+                    <h2>Hb &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; BP</h2>
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <input type="text" id="Hb" class="form-control" placeholder="HEMOGLOBIN"/>
+                        </div>
+                        <div class="col-sm-6">
+                            <input type="text" id="Bp" class="form-control" placeholder="BLOODP_RESSURE"/>
+                        </div>
+                    </div>
+                    <h2>Temparature &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Pulse</h2>
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <input type="text" id="Tmp" class="form-control" placeholder="TEMPRATURE"/>
+                        </div>
+                        <div class="col-sm-6">
+                            <input type="text" id="Pulse" class="form-control" placeholder="PULSE"/>
+                        </div>
+                    </div>
+                    <h2>donated previously?</h2>
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <input type="radio" value="yes" name="y"/><label>Yes</label>
+                            <br/><input type="radio" value="No" name="y"/><label>No</label>
+                        </div>
+                    </div>
+                    <hr/>
+                    <h2>What was the last time you donated blood?</h2>
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <input type="date" value="time" name="t" placeholder="MM-DD-YYYY"/>
+                        </div>
+                    </div><hr/>
+                    <h2>in the last six months have you had any of the following?</h2>
+                    <div class="row">
+                        <p><input type="radio" value="tatto" name="last"/><label> Tattooing</label><br/></p>
+                        <p><input type="radio" value="ear" name="last"/><label> Ear piercing</label><br/></p>
+                        <p><input type="radio" value="dental" name="last"/><label> Dental extraction</label><br/></p>
+                    </div><hr/>
+                    <h2>Do you suffer from or have suffered from any of the following diseases?</h2>
+                    <div class="row">
+                        <div class="col-sm-6">
+                        <p><input type="radio" value="tatto" name="diseases"/><label> &nbsp;&nbsp;Herat diseases</label><br/></p>
+                        <p><input type="radio" value="ear" name="diseases"/><label> &nbsp;&nbsp;Diabetes</label><br/></p>
+                        <p><input type="radio" value="dental" name="diseases"/><label> &nbsp;&nbsp;Sexually Transmitted Diseases</label><br/></p>
+                        <p><input type="radio" value="tatto" name="diseases"/><label> &nbsp;&nbsp;Allergic Diseases</label><br/></p>
+                        <p><input type="radio" value="ear" name="diseases"/><label> &nbsp;&nbsp;Lung Diseases</label><br/></p>
+                        <p><input type="radio" value="tatto" name="diseases"/><label> &nbsp;&nbsp;Epilepsy(haray rog)</label><br/></p>
+                        <p><input type="radio" value="ear" name="diseases"/><label> &nbsp;&nbsp;Jaundic (last one year)</label><br/></p>
+                        <p><input type="radio" value="ear" name="diseases"/><label> &nbsp;&nbsp;Fainting speels</label><br/></p>
+                        
+                        </div>
+                        <div class="col-sm-6">
+                        <p><input type="radio" value="tatto" name="diseases"/><label> &nbsp;&nbsp;Cancer/Malignant Disease</label><br/></p>
+                        <p><input type="radio" value="ear" name="diseases"/><label> &nbsp;&nbsp;Hepatitis B/C</label><br/></p>
+                        <p><input type="radio" value="dental" name="diseases"/><label> &nbsp;&nbsp;Typhoid (last on year) (Antay joro)</label><br/></p>
+                        <p><input type="radio" value="tatto" name="diseases"/><label> &nbsp;&nbsp;Tuberculosis</label><br/></p>
+                        <p><input type="radio" value="ear" name="diseases"/><label> &nbsp;&nbsp;Kidney Disease</label><br/></p>
+                        <p><input type="radio" value="tatto" name="diseases"/><label> &nbsp;&nbsp;abnormal Bleeding tendency</label><br/></p>
+                        <p><input type="radio" value="ear" name="diseases"/><label> &nbsp;&nbsp;Malaria (six Month)</label><br/></p>
+                        
+                        </div>
+                    </div><hr/><br/>
+                    <h2>Are you taking or have you taken any of these in the past 72 hours ?</h2>
+                    <div class="row">
+                        <div class="col-sm-12">
+                        <p><input type="radio" value="tatto" name="hours"/><label> &nbsp;&nbsp;Antibiotics</label><br/></p>
+                        <p><input type="radio" value="ear" name="hours"/><label> &nbsp;&nbsp;Steroids</label><br/></p>
+                        <p><input type="radio" value="dental" name="hours"/><label> &nbsp;&nbsp;Aspirin</label><br/></p>
+                        <p><input type="radio" value="tatto" name="hours"/><label> &nbsp;&nbsp;Vaccinations</label><br/></p>
+                        <p><input type="radio" value="ear" name="hours"/><label> &nbsp;&nbsp;Alcohol</label><br/></p>
+                        <p><input type="radio" value="tatto" name="hours"/><label> &nbsp;&nbsp;Dog bite Rabies vaccine (i Year)</label><br/></p>
+                        
+                        </div>
+                    </div><hr/><br/>
+                    <h2> is there any history of surgery or blood Transfusion in the past six months ?</h2>
+                    <div class="row">
+                        <div class="col-sm-12">
+                        <p><input type="radio" value="tatto" name="history"/><label> &nbsp;&nbsp;Major</label><br/></p>
+                        <p><input type="radio" value="ear" name="history"/><label> &nbsp;&nbsp;Minor</label><br/></p>
+                        <p><input type="radio" value="dental" name="history"/><label> &nbsp;&nbsp;Blood Transfusion</label><br/></p>
+                        </div>
+                    </div>
+                    
+                </div>
+                <hr/>
+                <div class="row">
+                    <div class="col-sm-6 text-end">
+                        <button class="btn btn-success btn-large" onclick="checkDoner();">Submit</button>
+                    </div>
+                    <div class="col-sm-6">
+                        <button class="btn btn-success btn-large" onclick="reset();">Reset</button>
+                    </div>
+                </div>
+                
+            </div>
+            <div class="col-sm-3 bg-primary">
+                <p><img src="blood3.jpg" alt="" style="width: 100%;"/></p>
+                <p><img src="blood10.jpg" alt="" style="width: 100%;"/></p>
+                <p><img src="blood11.jpg" alt="" style="width: 100%;"/></p>
+                <p><img src="blood12.jpg" alt="" style="width: 100%;"/></p>
+                <p><img src="blood6.jpg" alt="" style="width: 100%;"/></p>
+                <p><img src="497909032-Blood_Donation.jpg" alt="" style="width: 100%;"/></p>
+                <p><img src="blood4.jpg" alt="" style="width: 100%;"/></p>
+                <p><img src="blood3.jfif" alt="" style="width: 100%;"/></p>
+                <p><img src="BLOOD2.jfif" alt="" style="width: 100%;"/></p>
+                <p><img src="desk.webp" alt="" style="width: 100%;"/></p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12 bg-primary"><br/><br/></div>
+        </div>
+        <!--Output Row-->
+        <div class="row" id="outputrow" >
+            <div class="col-sm-12">
+                <div class="row text-center">
+                    <div class="col-sm-12">
+                        <h1 class="text-danger">Blood Donate Certificate<hr/></h1>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12">
+                    <img src="image_2022_09_01T17_59_25_854Z.png" alt="" style="width: 100%;"/><br/>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-2"></div>
+                <div class="col-sm-8">
+                   <table class="table table-default">
+                    <tbody>
+                        <tr>
+                            <td colspan="3" id="Name" class="text-center"> Name Will appere Here</td>
+                        </tr>
+                        
+                    </tbody>
+                    
+                   </table>
+                   <h1 class="text-center">FOR BLOOD DONATION AT<br/><br/>.................................BLOOD DONATION CAMP</h1>
+                </div>
+                <div class="col-sm-2"></div>
+            </div>
+                
+            </div>
+            <div class="row">
+                <div class="col-sm-12">
+                    <p><img src="image_2022_09_01T17_59_51_934Z.png" alt=""style="width: 100%;"/></p>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <!--last part-->
+        <div class="row">
+            <div class="col-sm-12 bg-primary"><br/><br/></div>
+        </div>
+    </div>
+    
+</body>
+</html>
