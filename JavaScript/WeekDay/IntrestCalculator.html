@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>intrest calculator</title>
+    <!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+<!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+</head>
+<script>
+    function calculateSI()
+    {
+            //access all input control
+            var pa=document.getElementById("pa");
+            var r=document.getElementById("rate");
+            var t=document.getElementById("time");
+            var si=document.getElementById("si");
+
+            //we can the value of any input element by value property
+            // value property always gives string value
+            if(pa.value==="")
+            {
+                alert("Plese enter Principal Amount");
+                pa.focus();
+                return;
+            }
+            if(r.value==="")
+            {
+                alert("Plese Enter Rate");
+                r.focus;
+                return;
+            }
+            if(t.value==="")
+            {
+                alert("Plese Enter TIme");
+                t.focus();
+                return;
+            }
+            // read value from all input element
+            var pav=parseFloat(pa.value);
+            var rv=parseFloat(r.value);
+            var tv=parseFloat(t.value);
+
+            // Calculate Si
+            var siv=(pav*rv*tv)/100;
+
+            //set result in simple Intrest Element
+            si.value=siv+"";
+    }
+    function resetSI()
+    {
+        //set empty string in all input element
+        document.getElementById("pa").value="";
+        document.getElementById("rate").value="";
+        document.getElementById("time").value="";
+        document.getElementById("si").value="";
+
+    }
+</script>
+<body>
+    
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-12 text-center text-danger"><br/>
+                <h1>SIMPLE INTREST CALCULATOR</h1>
+            </div><br/>
+        </div>
+        <div class="row">
+            <div class="col-sm-3 text-center">
+                <label>Principal Amount</label><br/>
+                <input type="number" id="pa" class="form-control" placeholder="Principal Amount"/>
+            </div>
+
+            <div class="col-sm-3">
+                <label>Rate</label><br/>
+                <input type="number" id="rate" class="form-control" placeholder="RATE"/>
+            </div>
+
+            <div class="col-sm-3">
+                <label>Time</label><br/>
+                <input type="number" id="time" class="form-control" placeholder="TIME"/>
+            </div>
+
+            <div class="col-sm-3">
+                <label>Simple Intrest</label><br/>
+                <input type="number" id="si" class="form-control" readonly placeholder="SIMPLE INTREST"/>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12 text-center">
+                <br/>
+                <button type="button" class="btn btn-success" onclick="calculateSI();">CALCULATE</button>
+                <button type="button" class="btn btn-primary" onclick="resetSI();">RESET</button>
+            </div> 
+        </div>
+    </div>
+</body>
+</html>
