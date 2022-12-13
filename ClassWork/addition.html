@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Addition Of Two Numbers</title>
+    
+    <script type="text/javascript">
+    function addition()
+    {
+        var nt1,nt2;
+        nt1=document.getElementById("n1");
+        nt2=document.getElementById("n2");
+        var sn1,sn2;
+        //extract value from first text box
+        sn1=nt1.value;
+        sn2=nt2.value;
+        //now convert botn value in 
+        var n1=parseFloat(sn1);
+        var n2=parseFloat(sn2);
+        var n3=n1+n2;
+        //display result on result labe
+        document.getElementById("result").innerHTML=n3+"";
+    }
+    </script>
+</head>
+<body>
+    <h1>Addition Of two numbers</h1>
+    <label>Enter 1st number:</label>
+    <input onchange="addition();" type="number" id="n1"/>
+    <br/>
+    <label>Enter 2nd Number:</label>
+    <input  onchange="addition();" type="number" id="n2"/>
+    <br/>
+    <label>Result:</label><label id="result"></label>
+    <br/>
+    <button >Find Sum</button>
+    
+</body>
+</html>

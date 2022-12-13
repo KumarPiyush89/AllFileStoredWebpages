@@ -1,0 +1,26 @@
+body{
+    background-color:bisque;
+}
+.theading{
+    color: blue;
+    text-align: center;
+    border-bottom: solid 2px black;
+
+}
+.def{
+    color: brown;
+    font-size: large;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background-color: rgb(157, 234, 236);
+}
+.example{
+    color: green;
+    font-size: small;
+    font-family: cursive;
+    background-color: rgb(250, 177, 214);
+}
+.noun{
+    color: indigo;
+    font-family: cursive;
+    font-style: italic;
+}

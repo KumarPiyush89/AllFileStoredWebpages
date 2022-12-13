@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS || Positioning</title>
+<style>
+    #bannerArea{
+        width: 100%;
+        height: 100px;
+        background-color: rgb(81, 146, 231);
+        position: absolute;
+        top: 0px;
+        left: 0px;
+    }
+    #importantLinkArea{
+        width: 15%;
+        height: 500px;
+        background-color: cornsilk;
+        position: absolute;
+        top: 100px;
+        left: 0px;
+    }
+    #aboutSchoolArea{
+        width: 40%;
+        height: 500px;
+        background-color: darkgrey;
+        position: absolute;
+        top: 100px;
+        left: 15%;
+        overflow: scroll;
+    }
+    #principalArea{
+        width: 30%;
+        height: 250px;
+        background-color: darkkhaki;
+        position:absolute;
+        top: 100px;
+        left: 55%;
+    }
+    #teachersArea{
+        width: 30%;
+        height: 250px;
+        background-color: darksalmon;
+        position: absolute;
+        top: 350px;
+        left: 55%;
+    }
+    #noticeBoardArea{
+        width: 15%;
+        height: 500px;
+        background-color: blueviolet;
+        position: absolute;
+        right: 0px;
+        top: 100px;
+    }
+    #footerArea
+    {
+        width: 100%;
+        height: 50px;
+        background-color: rebeccapurple;
+        position: fixed;
+        bottom: 0px;
+        left: 0px;
+    }
+    #image{
+        width: 50px;
+        height: 50px;
+        position: sticky;
+        right: 50px;
+        bottom: 50px;
+    }
+</style>
+</head>
+<body>
+    <div id="bannerArea">
+        <h1>Banner Area</h1>
+    </div>
+
+    <div id="importantLinkArea">
+        <p>importantLinkArea</p>
+    </div>
+    <div id="aboutSchoolArea">
+        <p>About school</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi veniam sit error voluptate, iste fugiat nihil! Nihil officiis atque iure, quod illum similique quia in veniam doloribus consequuntur reprehenderit voluptate!</p>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Amet quaerat voluptates libero debitis cupiditate officiis unde excepturi distinctio at aspernatur omnis quidem quibusdam a, vitae, consectetur ipsum sed soluta possimus!</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque mollitia autem nam perspiciatis, harum officia consequatur eveniet explicabo ad voluptates, ratione provident, minus eius! Cum deserunt libero non numquam velit!</p>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Alias nesciunt quisquam, corporis libero, reprehenderit reiciendis nemo facilis, ex facere recusandae repellendus eius eaque similique quasi suscipit tempore. Totam, quam itaque!</p>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Alias nesciunt quisquam, corporis libero, reprehenderit reiciendis nemo facilis, ex facere recusandae repellendus eius eaque similique quasi suscipit tempore. Totam, quam itaque!</p>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Alias nesciunt quisquam, corporis libero, reprehenderit reiciendis nemo facilis, ex facere recusandae repellendus eius eaque similique quasi suscipit tempore. Totam, quam itaque!</p>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Alias nesciunt quisquam, corporis libero, reprehenderit reiciendis nemo facilis, ex facere recusandae repellendus eius eaque similique quasi suscipit tempore. Totam, quam itaque!</p>
+        <img id="image" src="logo copy.png" alt="">
+    </div>
+    
+    <div id="principalArea">
+        <p>About principal</p>
+    </div>
+    
+    <div id="teachersArea">
+        <p>About Teacher</p>
+    </div>
+    
+    <div id="noticeBoardArea">
+        <p>notices</p>
+    </div>
+    
+    <div id="footerArea">
+        <p>Copyright and footer Area</p>
+    </div>
+    
+    
+</body>
+</html>
