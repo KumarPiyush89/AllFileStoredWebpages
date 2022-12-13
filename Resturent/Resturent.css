@@ -1,0 +1,37 @@
+*
+{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+}
+ul
+{
+    list-style: none;
+}
+nav 
+{
+    background-color: #f4d9c7;
+    padding: 10px;
+}
+a
+{
+    text-decoration: none;
+    color: white;
+}
+nav ul li 
+{
+    display: inline;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: large;
+    font-weight: 700;
+    margin: 0 70px;
+}
+a:hover
+{
+    border-bottom: 2px solid white;
+}
+#ar
+{
+    float: left;
+}

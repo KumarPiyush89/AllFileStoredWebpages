@@ -1,0 +1,17 @@
+img{
+    height:230px;
+    width: 230px;
+    border-style: solid;
+    
+    border-width: 0px;
+    padding: 0px;
+    margin: 10px;
+    border-color: aqua;
+}
+h1{
+     text-align: center;
+    
+}
+p{
+    font-size: large;
+}

@@ -1,0 +1,22 @@
+p
+{
+    font-size: 35px;
+    text-align: center;
+}
+a{
+  
+    font-size: 25px;
+}
+strong{
+    font-size: 60px;
+}
+h1{
+    text-align: center;
+}
+span{
+    text-shadow: 4px 4px 4px black;
+    color: red;
+}
+body{
+    background-color:rgb(179, 188, 245);
+}
