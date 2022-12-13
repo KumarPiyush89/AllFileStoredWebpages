@@ -1,0 +1,120 @@
+@keyframes zoom {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+}
+html,
+body {
+  overflow: hidden;
+  line-height: 1.5;
+  font-family: "Montserrat", "Arial", sans-serif;
+  color: #fff;
+  text-align: center;
+}
+html,
+body,
+.full-menu,
+.content {
+  width: 100%;
+  height: 100%;
+}
+.full-menu,
+.content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.content {
+  background-image: url(https://s3.amazonaws.com/StartupStockPhotos/20140808_StartupStockPhotos/96.jpg);
+  background-size: cover;
+  font-size: 3em;
+}
+.full-menu {
+  position: absolute;
+  background-color: #1e88e5;
+  opacity: 0.5;
+  transform: translateX(100%);
+  transition: all 400ms ease-in;
+}
+.full-menu li {
+  font-size: 4em;
+  color: #fff;
+  opacity: 0;
+  transform: translateY(2%);
+  transition: all 300ms ease-in;
+  cursor: pointer;
+}
+.full-menu li:after {
+  content: "";
+  position: absolute;
+  height: 5px;
+  width: 0%;
+  left: 0;
+  bottom: 0;
+  background-color: #fff;
+  transition: width 200ms ease-in;
+}
+.full-menu li:hover:after {
+  width: 100%;
+}
+.full-menu ul {
+  list-style: none;
+}
+.full-menu.active {
+  transform: translateX(0%);
+  opacity: 1;
+  z-index: 0;
+}
+.full-menu.active .home {
+  transition-delay: 0.3s;
+}
+.full-menu.active .about {
+  transition-delay: 0.4s;
+}
+.full-menu.active .works {
+  transition-delay: 0.5s;
+}
+.full-menu.active .contact {
+  transition-delay: 0.6s;
+}
+.full-menu.active li {
+  opacity: 1;
+  transform: translateX(0%);
+}
+.full-menu.active li:hover {
+  animation: zoom 200ms ease-in;
+}
+.hamburguer {
+  position: absolute;
+  width: 2em;
+  height: 2em;
+  margin: 3em;
+  z-index: 1;
+  cursor: pointer;
+}
+.hamburguer:hover {
+  animation: zoom 300ms ease-in;
+}
+.lines {
+  background-color: #fff;
+  width: 100%;
+  height: 5px;
+  margin: 5px 0;
+  transition: all 450ms ease-in;
+}
+.close-hamburguer .lines {
+  cursor: pointer;
+}
+.close-hamburguer .line-top {
+  transform: translateY(200%) rotate(45deg);
+}
+.close-hamburguer .line-mid {
+  opacity: 0;
+}
+.close-hamburguer .line-bottom {
+  transform: translateY(-200%) rotate(135deg);
+}

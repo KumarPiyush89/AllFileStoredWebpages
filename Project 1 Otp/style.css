@@ -1,0 +1,38 @@
+@import url("https://fonts.googleapis.com/css?family=Raleway:200");
+body,
+html {
+    height: 100%;
+    margin: 0;
+    font-family: "Raleway", sans-serif;
+    font-weight: 200;
+}
+body {
+    background-color: #0f0f1a;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.digit-group input {
+    width: 30px;
+    height: 50px;
+    background-color: #18182a;
+    border: none;
+    line-height: 50px;
+    text-align: center;
+    font-size: 24px;
+    font-family: "Raleway", sans-serif;
+    font-weight: 200;
+    color: white;
+    margin: 0 2px;
+}
+.digit-group .splitter {
+    padding: 0 5px;
+    color: white;
+    font-size: 24px;
+}
+.prompt {
+    margin-bottom: 20px;
+    font-size: 20px;
+    color: white;
+}

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OTP INPUT Feild</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="prompt">
+        Enter the code generated on your mobile device below to log in!
+    </div>
+    
+    <form method="get" class="digit-group" data-group-name="digits" data-autosubmit="false" autocomplete="off">
+        <input type="text" id="digit-1" name="digit-1" data-next="digit-2" />
+        <input type="text" id="digit-2" name="digit-2" data-next="digit-3" data-previous="digit-1" />
+        <input type="text" id="digit-3" name="digit-3" data-next="digit-4" data-previous="digit-2" />
+        <input type="text" id="digit-4" name="digit-4" data-next="digit-5" data-previous="digit-3" />
+    </form>
+    <!-- JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
