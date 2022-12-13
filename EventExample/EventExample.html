@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Example</title>
+    <script>
+        function changeToGreen()
+        {
+            var h=document.getElementById("h1");
+            h.style.color="#00ff00";
+        }
+        function changeToWhite()
+        {
+            var h=document.getElementById("h1");
+            h.style.color="#ffffff";
+        }
+        function changeToSaffron()
+        {
+            var h=document.getElementById("h1");
+            h.style.color="#ff7722";
+        }
+        function changeSaffronBtnBgColor()
+        {
+            document.getElementById("saffronBtn").style.backgroundColor="#ff7722";
+        }
+        function removeSaffronBtnBgColor()
+        {
+            document.getElementById("saffronBtn").style.backgroundColor="grey";
+        }
+        function changeWhiteBtnBgColor()
+        {
+            document.getElementById("whiteBtn").style.backgroundColor="#ffffff";
+        }
+        function removeWhiteBtnBgColor()
+        {
+            document.getElementById("whiteBtn").style.backgroundColor="grey";
+        }
+        function changeGreenBtnBgColor()
+        {
+            document.getElementById("greenBtn").style.backgroundColor="#00ff00";
+        }
+        function removeGreenBtnBgColor()
+        {
+            document.getElementById("greenBtn").style.backgroundColor="grey";
+        }
+        function changeToShakeHand()
+        {
+            document.getElementById("imo").src="PIYUSHK.png";
+        }
+        function changeToThink()
+        {
+            document.getElementById("imo").src="piyushb.png";
+        }
+
+        function checkElegibility()
+        {
+            var inputData=document.getElementById("ageBox").value;
+            if(inputData==="")
+            {
+                alert("Enter age first!");
+                document.getElementById("ageBox").focus();
+                return;
+            }
+
+            var age=parseInt(inputData);
+            var result=document.getElementById("result");
+            var resultImg=document.getElementById("resultImg");
+            if(age>=18)
+            {
+                result.innerHTML="You are Eligible to caste vote";
+                result.style.color="#00ff00";
+                resultImg.src="RIGHT.jfif";
+            }
+            else
+            {
+                result.innerHTML="Sorry! You cant caste vote";
+                result.style.color="#ff0000";
+                resultImg.src="WRONG.jfif";
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1 style="color:#Ff7722" id="h1">Happy 75<sup>th</sup> Independence</h1>
+    <button 
+    onclick="changeToSaffron();" 
+    id="saffronBtn" 
+    onmouseenter="changeSaffronBtnBgColor();" 
+    onmouseleave="removeSaffronBtnBgColor();"> Saffron </button>
+    
+    <button 
+    id="whiteBtn" 
+    onclick="changeToWhite();"
+    onmouseenter="changeWhiteBtnBgColor();"
+    onmouseleave="removeWhiteBtnBgColor();"
+    >White</button>
+    
+    <button  
+    onclick="changeToGreen();" 
+    id="greenBtn"
+    onmouseenter="changeGreenBtnBgColor();"
+    onmouseleave="removeGreenBtnBgColor();"
+    >Green</button>
+
+    <img src="PIYUSHK.png" height="200px" width="200px" id="imo" 
+    onmouseenter="changeToShakeHand();"
+    onmouseleave="changeToThink();"
+    />
+
+    <div>
+        <h1>Check Vote Caste Eligibility</h1>
+        <input type="number" id="ageBox" placeholder="Enter person's age"/>
+        <button id="checkBtn" style="background-color: #00ff00;" onclick="checkElegibility();">Check</button>
+        <button id="resetBtn" style="background-color: #0000ff;">Reset</button>
+        <br/>
+        <table>
+            <tbody>
+                <tr>
+                    <td><img height="50px" width="50px" id="resultImg"/></td>
+                    <td><h1 id="result"></h1></td>
+                </tr>
+            </tbody>
+        </table>
+        
+    </div>
+</body>
+</html>
