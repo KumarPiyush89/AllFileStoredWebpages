@@ -1,0 +1,46 @@
+body {
+  background: transparent;
+  background-color: transparent;
+}
+.clock {
+  width: 60vh;
+  height: 60vh;
+  border-radius: 50%;
+  margin: 20vh auto;
+  display: flex;
+  position: relative;
+}
+
+.clock-face {
+  width: 55vh;
+  height: 55vh;
+  border-radius: 50%;
+  position: absolute;
+  top: 2.5vh;
+  left: 2.5vh;
+  background: url('https://github.com/umarcbs/AnalogCLock/blob/master/clock-face2.png?raw=true');
+  background-size: 100% 100%;
+}
+
+.hand {
+  width: 35%;
+  height: 6px;
+  background-color: black;
+  position: absolute;
+  top: 49.5%;
+  left: 17.5%;
+  transform-origin: 95%;
+  transform: rotate(90deg);
+  transition: all 0.05s;
+  transition-timing-function: cubic-bezier(0.1, 2.7, 0.58, 1);
+}
+
+.second-hand {
+  height: 3px;
+}
+
+.hour-hand {
+  width: 20%;
+  left: 31.8%;
+  top: 50%;
+}
