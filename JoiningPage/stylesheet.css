@@ -1,0 +1,98 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Segoe UI", 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-image: url("butterfly_wood-1920x1080.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+}
+img {
+    width: 10px;
+}
+.logo {
+    text-decoration: none;
+    font-size: 300px;
+    font-family: inherit;
+    font-weight: 900;
+    margin: 20px;
+    color: inherit;
+}
+.main-container {
+    text-align: center;
+    background-color: rgba(67, 29, 29, 0.8);
+    padding: 5px 5px;
+    margin-top: 5%;
+    margin-left: 40%;
+    margin-right: 40%;
+    color: rgb(255,255,255);
+    border: 2px solid white;
+    border-radius: 20px;
+}
+img {
+    width: 80px;
+    height: 80px;
+    padding: inherit;
+    margin: inherit;
+    margin-top: 10px;
+}
+.btn {
+    border: 2px solid white;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    background-color: rgb(2, 2, 83);
+    color: white;
+    width: 50%;
+    padding: 10px 20px;
+    font-size: large;
+}
+.email {
+    border: none;
+    border-radius: 10px;
+    width: 80%;
+    padding: 10px 5px;
+    background-color: rgb(187,181,181);
+
+}
+.f-name{
+    border: none;
+    border-radius: 10px;
+    width: 80%;
+    padding: 10px 5px;
+    background-color: rgb(187, 181, 181);
+}
+.l-name {
+    border: none;
+    border-radius: 10px;
+    width: 80%;
+    padding: 10px 5px;
+    background-color: rgb(187, 181, 181);
+}
+
+label {
+    float: left;
+    margin-left: 10%;
+}
+h1 {
+    text-transform: capitalize;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: left;
+    color: blue;
+
+}
+p{
+    font-weight: 500;
+}
+.notice{
+    text-align: center;
+    font-size: 11px;
+    color: white;
+    text-decoration: none;
+}
+
+.social-media img {
+    width: 30px;
+    height: 30px;
+    border: 2px solid white;
+    border-radius: 2px;
+}
