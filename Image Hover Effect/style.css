@@ -1,0 +1,40 @@
+/* -------------------------------- 
+
+💡 How to create an image clipping effect in CSS
+🔗 https://codyhouse.co/nuggets/image-clipping-effect
+
+-------------------------------- */
+
+.wrapper {
+  width: 400px;
+}
+
+.figure, .img {
+  will-change: transform;
+  transition: transform .3s;
+}
+
+.figure {
+  overflow: hidden;
+}
+
+.img {
+  width: 100%;
+}
+
+.wrapper:hover .figure {
+  transform: scale(0.9);
+}
+
+.wrapper:hover .img {
+  transform: scale(1.111);
+}
+
+/* demo stuff */
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 2rem;
+}

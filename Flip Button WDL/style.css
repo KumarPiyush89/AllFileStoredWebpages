@@ -1,0 +1,47 @@
+body {
+    min-height: 100vh;
+    font-family: 'Figtree', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+  
+  .flip {
+    background-color: transparent;
+    width: 180px;
+    height: 48px;
+    line-height: 48px;
+    perspective: 500px;
+    padding: 3px;
+    background: #ecedf0;
+    border-radius: 28px; }
+  
+  .inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 1s;
+    transform-style: preserve-3d;
+    pointer-events: none; }
+  
+  .flip:hover .inner {
+    transform: rotateX(180deg); }
+  
+  .front, .back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 24px;
+    font-size: 16px;
+    font-weight: 500;
+    color: white; }
+  
+  .front {
+    background: #0077ff; }
+  
+  .back {
+    background: #005fcc;
+    transform: rotateX(180deg); 
+  }
+  

@@ -1,0 +1,44 @@
+@import "https://unpkg.com/open-props" layer(design.system);
+@import "https://unpkg.com/open-props/normalize.min.css" layer(demo.support);
+
+@layer demo {
+  body {
+    font-family: system-ui;
+    font-variation-settings: 'wght' 100, 'wdth' 100;
+    background: hsl(250 5% 5%);
+    color: var(--indigo-2);
+  }
+  
+  div > span {
+    will-change: font-variation-settings;
+    transition: all .2s var(--ease-3);
+  }
+  
+  div > span:hover {
+    font-variation-settings: 'wght' 700, 'wdth' 125;
+    color: var(--text-1);
+  }
+  
+  div > span:hover + span,
+  div > span:has(+ span:hover) {
+    font-variation-settings: 'wght' 500, 'wdth' 125;
+    color: var(--indigo-1);
+  }
+  
+  div > span:hover + span + span,
+  div > span:has(+ span + span:hover) {
+    font-variation-settings: 'wght' 300, 'wdth' 125;
+    color: var(--indigo-1);
+  }
+}
+
+@layer demo.support {
+  body {
+    display: grid;
+    place-content: center;
+    padding: var(--size-5);
+    gap: var(--size-2);
+    text-align: center;
+    font-size: 8vmin;
+  } 
+}
