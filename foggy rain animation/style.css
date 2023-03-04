@@ -1,0 +1,67 @@
+body{
+  min-height: 100vh;
+  font: 150%/1.1 'Gaegu', cursive;
+  padding-top: calc(50vh - 4em);
+}
+
+body, 
+.foggy, 
+.container:before{
+  background: url('https://cdn.pixabay.com/photo/2015/09/09/21/31/rain-933490_960_720.jpg') 0 / cover fixed; 
+}
+
+.container{
+  position: relative;
+  margin: 0 auto;
+  padding: 2em;
+  max-width: 24em;
+  background: hsla(0, 0%, 100%, 0.2) border-box;
+  border-radius: 0.5em;
+  box-shadow: 0 0 0 0.1em hsla(0, 0%, 100%, 0.4);
+  overflow: hidden;
+}
+
+.container:before{
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  -webkit-filter: blur(50px);
+  filter: blur(50px);
+}
+
+.foggy{
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  font-size: 4em;
+  text-align:center;
+  user-select: none;
+}
+
+.raindrop {
+position: fixed;
+top: -50px;
+width: 2px;
+height: 30px;
+background-color: #D3D3D3;
+animation: rain 0.4s linear infinite;
+opacity: 0.2;
+z-index: -2;
+}
+
+@keyframes rain {
+from {
+left: Math.random() * window.innerWidth;
+}
+to {
+left: Math.random() * window.innerWidth;
+top: 100%;
+  }
+}
+
+
+
