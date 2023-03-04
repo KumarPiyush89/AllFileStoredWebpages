@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login</title>
+
+   	<script type="text/javascript" src="login.js"></script>
+	
+<style>
+
+			body {
+			
+				background:url('img/bgimg.jpg');
+				color:rgb(255, 255, 255);
+				margin-top: 50px;
+				margin-left: 100px;
+			
+				text-align: center;
+				font-family:'Calibri', courier, monospace; 
+				background-size:cover;
+				background-repeat: no-repeat;
+				
+				
+			}
+
+			form{
+				
+				border-radius: 20px;
+				padding: 3%;
+				
+				width: 60%;
+				height: 30%;
+				
+				border-radius: 20px;
+				
+			}
+			form:hover{
+				
+				background-image: radial-gradient(rgba(255, 255, 255, 0.24),  rgba(0, 0, 0, 0.349) );   
+			}
+
+			.input{
+					background:rgba(0, 0, 0, 0.671);
+					border:none;
+					border-radius: 20px;
+					border-bottom:2px solid rgba(255, 255, 255, 0.459); 
+					height: 26px;
+					width: 400px; 
+					color: rgb(255, 255, 255);
+					font-size: 24px;
+					/* text-transform: lowercase; */
+					text-align: center;
+					word-spacing: 4px;
+					letter-spacing: 2px;
+					font-family:'Calibri', courier, monospace; 
+					outline:none;
+			}
+			.input:hover{
+				border-bottom:2px solid rgb(255, 255, 255);
+			}
+
+			::placeholder{
+				color: white;
+			}
+			
+
+			.submit{
+					background:rgba(0, 0, 0, 0.671);
+					border:none;
+					border-radius: 20px;
+					border-bottom:2px solid rgba(255, 255, 255, 0.459); 
+					height: 35px;
+					width: 400px; 
+					color: rgb(255, 255, 255);
+					font-size: 24px;
+					font-weight: bold;
+					text-align: center;
+					word-spacing: 4px;
+					letter-spacing: 2px;
+					font-family:'Calibri', courier, monospace; 
+				
+			}
+			.submit:hover{
+				border-bottom:2px solid rgb(255, 255, 255); 
+				letter-spacing: 8px;
+				transition:0.5s;
+			}
+			.eye{
+				
+				
+				border-radius: 20px; 
+				background-color:rgba(30, 143, 255, 0.479);
+				font-size: 23px;
+				cursor: pointer;
+				
+			}
+			.eye:hover{
+				background-color: rgba(30, 143, 255, 0.178);
+			}
+
+			.link a{
+				margin-left:5em ;
+				text-decoration: none;
+				color:dodgerblue;
+
+				
+			}
+			.a{
+				margin-left: 270px;
+				text-decoration: none;
+				color:dodgerblue;
+			}
+			a:hover{
+				color: white;
+			}
+   
+	</style>
+			
+</head>
+        
+<body>
+	
+	
+	
+	<form action="log.php" method="POST" name="lform">
+	
+	 	
+		<div class="container">
+			
+			<a href="index.html"><img src="img/gyml3w.png" class="avtar" width="130"hight="130"></a>
+			
+			<h1>WELCOME TO GYM</h1>
+			<br>
+
+			
+			<input type="email" class="input" name="email" placeholder="Email"  required="">
+        	 <br><br>
+			
+			<input type="password" class="input" name="password" id="psw" placeholder="Password" required="" >
+			<br>
+			<b class="eye" id="color" onclick="eyeFunction()">👁</b>
+			<b>&nbsp;&nbsp;show password&emsp;&emsp;&emsp;&emsp;</b>  <!--&nbsp; stands for space and &emsp; stends for tab space-->
+			<span class="link"><a href="#">forgot password?</a>
+			</span>
+			
+			<br><br><br>
+
+			<button type="submit" class="submit" name="submit">Let's Start</button>
+		 </div>
+		 <br><br>
+		<div class="container">
+			
+			<span class="">
+				<a class="a" href="registration.html">Don't have account?</a>
+			</span>
+		</div>
+	</form>
+
+</body>
+</html>

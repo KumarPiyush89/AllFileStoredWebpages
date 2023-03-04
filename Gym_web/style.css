@@ -1,0 +1,299 @@
+*{padding: 0; margin:0; box-sizing: border-box; font-family: sans-serif;}
+header{
+	width: 100%;
+	height: 100vh;
+	background: black;
+	clip-path: polygon(0% 0%,100% 0%, 100% 100%,80% 80%,0% 100%);
+}
+nav{
+	width: 100%;
+	height: 100px;
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+	color: white;
+}
+.logo{
+	font-size: 50px;
+	font-weight: bold;
+	letter-spacing: 5px;
+}
+#blue{
+	color:#74b9ff;
+}
+
+.menu a{
+	text-decoration: none;
+	color: white;;
+	font-size: 20px;
+	font-weight: bold;
+	padding: 10px;
+	margin: 10px;
+}
+
+
+.menu a:first-child{
+	border-bottom: 2px solid #74b9ff;
+}
+.icon img{
+	width: 100px;
+}
+.container{
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: white;
+}
+.left{
+	flex-basis: 50%;
+}
+.right{
+	flex-basis: 50%;
+	max-width: 400px;
+}
+.right h1{
+	color: #74b9ff;
+	font-size: 50px;
+}
+.right p{
+	font-size: 25px;
+	margin:10px 0px;
+}
+.btn{
+	background: transparent;
+	padding: 10px 20px;
+	color: #74b9ff;
+	border: 1px solid #74b9ff;
+	border-radius: 8px;
+}
+#about{
+	padding: 100px 0px;
+}
+.about-row{
+	width: 100%;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+.about-left-col{
+	flex-basis: 50%;
+
+}
+.about-right-col{
+	flex-basis: 50%;	
+	text-align: center;
+}
+.about-right-col img{
+	width: 80%;
+}
+.about-left-col{
+	max-width: 400px;
+	margin:auto;
+}
+
+
+.about-left-col h1{
+	font-size: 50px;
+}
+.about-left-col p{
+	font-size: 20px;
+	text-align: justify;
+	margin:15px 0px;
+}
+
+
+.c-btn{
+	padding: 10px;
+	margin:10px 0px;
+	color: white;
+	border: none;
+	background: #74b9ff;
+}
+
+#signup{
+	padding-top: 50px;
+	padding-bottom: 20px;
+	background: rgba(0,0,0,0.03);
+	clip-path: polygon(0% 0%,100% 0%, 100% 100%,80% 80%,0% 100%);
+}
+
+.signup-row{
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+.signup-left-col{
+	flex-basis: 50%;
+	text-align:center;
+}
+.signup-left-col img{
+	width: 60%;
+}
+.signup-right-col{
+	flex-basis: 50%;
+}
+
+.signup-right-col h1{
+	font-size: 90px;
+}
+.signup-right-col h2{
+	font-size: 45px;
+	letter-spacing: 60px;
+	color: rgba(0,0,0,0.3);
+	margin:10px 0px;
+}
+
+
+#services{
+	padding: 50px 0px;
+}
+.services-info{
+	text-align: center;
+}
+.services-info h1{
+	font-size: 50px;
+}
+.services-info p{
+	font-size: 25px;
+	font-weight: bold;
+}
+.services-row{
+	display: grid;
+	grid-template-columns: repeat(3,200px);
+	grid-auto-rows: minmax(150px,auto);
+	grid-gap: 3em;
+	justify-content: center;
+	padding-top: 20px;
+}
+.services-box{
+	box-shadow: 2px 3px 5px grey;
+	padding: 10px;
+	text-align: center;
+
+}
+.services-box i{
+	background: #0984e3;
+	color: white;
+	font-size: 30px;
+	padding: 10px;
+	margin-top: -20px;
+}
+
+#members{
+	padding: 100px;
+	background: url(images/dumble.png);
+	background-size: 35% 35%;
+	background-repeat: no-repeat;
+	background-position: top right;
+}
+.member-card{
+	text-align: center;
+	padding-top: 50px;
+	width: 50%;
+	margin:auto;
+	}
+
+.member-card p{
+	margin:20px 0px;
+}
+.member-card h2{
+	margin:20px 0px;
+}
+
+#work{
+	padding-top: 50px;
+	padding-bottom: 200px;
+	background: rgba(0,0,0,0.03);
+	clip-path: polygon(0% 0%,100% 0%, 100% 100%,80% 80%,0% 100%);
+}
+.work-box{
+	box-shadow: 2px 3px 5px grey;
+}
+
+.work-box img{
+	width: 100%;
+	height: 100%;
+}
+
+#contact{
+	padding: 30px 0px;
+}
+
+.contact-row{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.contact-left-col{
+	flex-basis: 50%;
+	padding-top: 50px;
+}
+.contact-right-col{
+	flex-basis: 50%;
+	max-width: 450px;
+	margin: auto;
+}
+.contact-right-col i{
+	font-size: 20px;
+	padding: 10px;
+	background:#74b9ff;
+	color: white; 
+}
+.contact-right-col p{
+	margin-top: 10px;
+	margin-bottom: 20px;
+}
+
+
+#footer{
+	background: black;
+	color:white;
+	padding: 10px;
+	display: flex;
+
+	justify-content: space-around;
+	align-items: center;
+}
+
+
+#footer h1{
+	font-size: 50px;
+}
+#footer p{
+	font-size: 25px;
+}
+
+
+
+.form{
+
+	width: 70%;
+	margin:auto;
+	text-align: center;
+}
+.form input[type="text"]{
+	width: 70%;
+	padding: 10px;
+	margin-bottom: 10px;
+}
+textarea{
+	width: 70%;
+	padding: 10px;
+	margin-bottom: 10px;
+}
+
+
+
+.c_btn{
+	background: black;
+	color: white;
+	padding: 10px;
+	width: 50%;
+	border:none;
+}
+
+
+
+
+

@@ -1,0 +1,24 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: black;
+}
+
+h1{
+    font-size: 70px;
+    font-family: cursive;
+    font-weight: 900;
+    color: transparent;
+    background-image: url("https://media0.giphy.com/media/l0MYxqKEmJoL150TC/200w.webp?cid=ecf05e47jxwzjeosjeuotbalfqzdhf0jg75b3rrbvwasbddo&rid=200w.webp&ct=g");
+    background-repeat: no-repeat;
+    background-size: cover;
+    -webkit-background-clip: text;
+}
