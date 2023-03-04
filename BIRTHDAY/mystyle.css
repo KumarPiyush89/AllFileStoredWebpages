@@ -1,0 +1,80 @@
+@media only screen and (min-width: 669px) and (max-width: 850px) {
+    #main-text {
+        margin-top: 8px;
+        font-size: 16px;
+    }
+}
+
+@media only screen and (max-width: 668px) {
+    #card h2 {
+        animation: none;
+    }
+    #overlay {
+        background-image: url("revealm.jpeg");
+    }
+    #card-front,
+    #card-inside {
+        width: 90%;
+        left: 5%;
+    }
+    #card h2 {
+        font-size: 40px;
+        /* -webkit-text-fill-color: transparent; */
+        color: #FF55B8;
+        text-shadow: 0px 0px 0px;
+        font-weight: 500;
+        font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+        /* text-decoration: none solid rgb(68, 68, 68); */
+    }
+    #card,
+    #card-front,
+    #card-inside {
+        height: 350px;
+        margin-bottom: 40%;
+    }
+    .wrap {
+        padding: 8px 25px;
+        height: 100%;
+    }
+    .wrap p {
+        margin-top: 5px;
+    }
+    .balloons {
+        width: 100px;
+        height: auto;
+    }
+    .balloon {
+        width: 60px;
+        height: 80px;
+        background-size: 60px 80px;
+    }
+    .balloon h3 {
+        font-size: 20px;
+    }
+    #card-front button,
+    #card-inside button {
+        font-size: 18px;
+    }
+    p.sign {
+        margin-top: 5px;
+        font-size: 25px;
+    }
+    #main-text {
+        margin-top: 8px;
+        font-size: 16px;
+    }
+    #open:hover {
+        animation: none;
+    }
+}
+
+@media only screen and (max-width: 286px) {
+    #main-text {
+        font-size: 15px;
+        margin-top: 2px;
+    }
+    .wrap {
+        padding: 2px 5px;
+        height: 100%;
+    }
+}
