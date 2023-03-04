@@ -1,0 +1,223 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  html {
+    font-size: 62.5%;
+    /* 1 rem = 16px  to convert 1rem = 10px */
+  }
+  
+html,body{
+     font-family: "Inter", sans-serif;
+    font-weight: 300;
+    line-height: 1.4;
+    scroll-behavior: smooth;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+ul{
+    list-style: none;
+}
+
+
+header{
+    position: sticky;
+    top: 0;
+    background: #fff;
+    /* box-shadow: 1px 1px 10px rgba(1,1,1,0.5); */
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+nav h1{
+    font-size: 2rem;
+}
+nav ul{
+    display: flex;
+    gap: 2rem;
+}
+
+nav ul li{
+    font-size: 1.8rem;
+   font-weight: 500;
+}
+
+nav ul li:hover{
+    border-bottom: 2px solid rgb(255, 255, 0);
+}
+
+nav i{
+    font-size: 2rem;
+}
+
+/* Main */
+/* Hero Section */
+
+main{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+#hero{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 4rem 0;
+}
+
+
+.hero-content h1{
+    font-size: 7.5rem;
+    line-height: 1.2;
+}
+
+.hero-content h4{
+    font-size: 2.5rem;
+    font-weight: 300;
+}
+
+.hero-image img{
+    border-radius: 5rem;
+}
+
+/* Long Card section (h-card)*/
+
+.h-card{
+    display: flex;
+    align-items: center;
+    margin: 2rem 1rem;
+    border: 1px solid #e2e2e2;
+    box-shadow: 0px 5px 4px rgba(221,221,221,0.25);
+    border-radius: 0.5rem;
+    overflow: hidden;
+}
+
+.card-content{
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.status{
+    display: flex;
+    justify-content: space-between;
+}
+
+.read-btn{
+    all: unset;
+    font-weight: 700;
+    font-size: 1.3rem;
+    border-bottom: 1px solid transparent;
+}
+
+.read-btn:hover{
+    border-bottom: 1px solid #ccc;
+}
+
+.card-content h2{
+    font-size: 3rem;
+}
+
+.card-content p{
+    font-size: 1.3rem;
+}
+
+.status button{
+    font-weight: 500;
+}
+
+/* v-card */
+
+.v-card{
+    display: flex;
+    flex-direction: column-reverse;
+    margin: 2rem 1rem;
+    max-width: 320px;
+    align-items: center;
+    border: 1px solid #e2e2e2;
+    box-shadow: 0px 5px 4px rgba(221,221,221,0.25);
+    border-radius: 0.5rem;
+    overflow: hidden;
+}
+
+.card_container{
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(320px,1fr));
+}
+
+.card_wrapper{
+    display: flex;
+    justify-content: center;
+}
+
+.v-card  img{
+    width: 100%;
+    height: 100%;
+}
+
+.v-card .card-content h2{
+    font-size: 2rem;
+    margin-bottom: -1.2rem;
+}
+
+/* Footer */
+
+footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+footer ul{
+    display: flex;
+    gap: 2rem;
+}
+
+footer ul li{
+    font-size: 1.8rem;
+}
+
+/* Post Page */
+
+
+.banner_image img{
+    width: 100%;
+}
+
+.post h1{
+    font-size: 3rem;
+}
+
+.post hr{
+    margin: 3rem 0;
+}
+
+.about-author{
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+article{
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    margin-bottom: 2rem;
+}
