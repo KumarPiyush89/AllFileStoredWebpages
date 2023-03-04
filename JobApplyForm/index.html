@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jop Apply Form</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="form">
+            <h1>Job Application Form <span class="txt">(Web Developer)</span></h1>
+            <form action="">
+                <div class="form-container">
+                    <div class="form-control">
+                        <label for="first-name">First Name</label>
+                        <input type="text" id="first-name" placeholder="Enter your First Name">
+                    </div>
+
+                    <div class="form-control">
+                        <label for="last-name">Last Name</label>
+                        <input type="text" id="last-name" placeholder="Enter your Last Name">
+                    </div>
+
+                    <div class="form-control">
+                        <label for="Email">Email</label>
+                        <input type="email" id="Email" placeholder="Enter your Email">
+                    </div>
+
+                    <div class="form-control">
+                        <label for="Job-Role">Job Role</label>
+                        <select name="" id="Job-Role">
+                            <option value="">Select your Job Role</option>
+                            <option value="frontend">Frontend Developer</option>
+                            <option value="backend">Backend Developer</option>
+                            <option value="fullstack">Full Stack Developer</option>
+                            <option value="ui-ux">UI UX Designer</option>
+                        </select>
+                    </div>
+
+                    <div class="form-control">
+                        <label for="address">Address</label>
+                        <textarea name="address" id="address" cols="30" rows="4" placeholder="Enter your address"></textarea>
+                    </div>
+
+                    <div class="form-control">
+                        <label for="city">City</label>
+                        <input type="city" id="city" placeholder="Enter your City">
+                    </div>
+
+                    <div class="form-control">
+                        <label for="pincode">Pincode</label>
+                        <input type="number" id="pincode" placeholder="Enter your Pincode">
+                    </div>
+
+                    <div class="form-control">
+                        <label for="date">Date</label>
+                        <input value="2023-01-09" type="date" id="date" name="date">
+                    </div>
+
+                    <div class="form-control">
+                        <label for="upload">Upload your CV</label>
+                        <input type="file" id="upload" name="upload">
+                    </div>
+                </div>
+
+                <div class="btn-container">
+                    <button type="submit">Apply Now</button>
+                </div>
+            </form>
+
+        </div>
+    </div>
+
+</body>
+
+</html>
