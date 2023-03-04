@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css"/>
+    <title>Document</title>
+</head>
+<body>
+    
+
+        <div class="container">
+            <div class="product">
+                <div class="gallery">
+                    <img src="image1.png" id="productImg" >
+                    <div class="controls">
+                        <span class="btn active"></span>
+                        <span class="btn"></span>
+                        <span class="btn"></span>
+                    </div>
+                </div>    
+                <div class="details">
+                    <h1>Casual T Shirt</h1>
+                    <h2>$15.00</h2>
+                    <h3>30% OFF</h3>
+                    <p>U.S. Polo Assn. is the authentic and official brand of the United States Polo Association.</p>
+                    <form>
+                        <div class="size-select">
+                            <p>Size</p>
+                            <label for="small">
+                                <input type="radio" name="size" id="small">
+                                <span>S</span>
+                            </label>
+                            <label for="medium">
+                                <input type="radio" name="size" id="medium">
+                                <span>M</span>
+                            </label>
+                            <label for="large">
+                                <input type="radio" name="size" id="large">
+                                <span>L</span>
+                            </label>
+                            <label for="x-large">
+                                <input type="radio" name="size" id="x-large">
+                                <span>XL</span>
+                            </label>
+                            <label for="xx-large">
+                                <input type="radio" name="size" id="xx-large">
+                                <span>XXL</span>
+                            </label>
+                        </div>
+
+                        <div class="color-select">
+                            <p>Color</p>
+                            <label for="red">
+                                <input type="radio" name="color" id="red">
+                                <span class="color-1" ></span>
+                            </label>
+                            <label for="green">
+                                <input type="radio" name="color" id="green">
+                                <span class="color-2"></span>
+                            </label>
+                            <label for="blue">
+                                <input type="radio" name="color" id="blue">
+                                <span class="color-3"></span>
+                            </label>
+                            <label for="pink">
+                                <input type="radio" name="color" id="pink">
+                                <span class="color-4"></span>
+                            </label>
+                        </div>
+                        <div class="quantity-select">
+                            <p>Quantity</p>
+                            <input type="number" value="1">
+                        </div>
+                        <button>Buy Now</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            let productImg = document.getElementById("productImg");
+            let btn = document.getElementsByClassName("btn");
+
+            btn[0].onclick = function(){
+                productImg.src = "image1.png";
+
+                for(bt of btn){
+                    bt.classList.remove("active");
+                }
+                this.classList.add("active");
+
+            }
+            btn[1].onclick = function () {
+                    productImg.src = "./images/image2.png";
+                    for (bt of btn) {
+                    bt.classList.remove("active");
+                }
+                this.classList.add("active");
+
+
+                }
+            btn[2].onclick = function () {
+                    productImg.src = "./images/image3.png";
+                    for (bt of btn) {
+                    bt.classList.remove("active");
+                }
+                this.classList.add("active");
+
+
+                }
+                
+            
+
+        </script>
+    </body>
+    
+</html>
