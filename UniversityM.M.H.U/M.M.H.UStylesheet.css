@@ -1,0 +1,152 @@
+#bannerArea
+            {
+                width: 100%;
+                height: 17%;
+                position: absolute;
+                top: 0%;
+                left: 0px;
+                background-color: azure;
+            }
+            #home
+            {
+                top: 17%;
+                left: 0%;
+                height: 3%;
+                width: 10%;
+                color: blue;
+                position: absolute;
+                text-align: center;
+                background-color: rgb(94, 233, 233);
+            }
+            #mission
+            {
+                top: 17%;
+                left: 10%;
+                height: 3%;
+                width: 10%;
+                color: blue;
+                position: absolute;
+                text-align: center;
+                background-color: rgb(94, 233, 233);
+            }
+            #vision
+            {
+                top: 17%;
+                left: 20%;
+                height: 3%;
+                width: 10%;
+                color: blue;
+                position: absolute;
+                text-align: center;
+                background-color: rgb(94, 233, 233);
+            }
+            #aboutTheUniversity
+            {
+                background-color: rgb(94, 233, 233);
+                top: 17%;
+                left: 30%;
+                height: 3%;
+                width: 10%;
+                color: blue;
+                position: absolute;
+                text-align: center;
+            }
+           
+           
+            #studentcorner
+            {
+                top: 17%;
+                right: 50%;
+                height: 3%;
+                width: 10%;
+                color: blue;
+                position: absolute;
+                text-align: center;
+                background-color: rgb(94, 233, 233);
+            }
+            #download
+            {
+                background-color: rgb(94, 233, 233);
+                top: 17%;
+                right: 40%;
+                height: 3%;
+                width: 10%;
+                color: blue;
+                position: absolute;
+                text-align: center;
+            }
+            #examination
+            {
+                background-color: rgb(94, 233, 233);
+                top: 17%;
+                right: 30%;
+                height: 3%;
+                width: 10%;
+                color: blue;
+                position: absolute;
+                text-align: center;
+            }
+            #academic
+            {
+                background-color: rgb(94, 233, 233);
+                top: 17%;
+                right: 20%;
+                height: 3%;
+                width: 10%;
+                color: blue;
+                position: absolute;
+                text-align: center;
+            }
+            #feedback
+            {
+                background-color: rgb(94, 233, 233);
+                top: 17%;
+                right: 10%;
+                height: 3%;
+                width: 10%;
+                color: blue;
+                position: absolute;
+                text-align: center;
+            }
+            #contactus
+            {
+                background-color: rgb(94, 233, 233);
+                top: 17%;
+                right: 0%;
+                height: 3%;
+                width: 10%;
+                color: blue;
+                position: absolute;
+                text-align: center;
+            }
+            #missionArea
+            {
+                width: 20%;
+                height: 17.5%;
+                top: 55%;
+                left: 65%;
+                position: absolute;
+                background-color: aliceblue;
+                overflow: scroll;
+            }
+            #visionArea
+            {
+                width: 20%;
+                height: 17.5%;
+                top: 72.5%;
+                left: 65%;
+                background-color: whitesmoke;
+                position: absolute;
+                overflow: scroll;
+            }
+            .notice
+            {
+                width: 100%;
+                height: 500px;
+            }
+            .image
+            {   top: 0%;
+                left: 0%;
+                height: 17%;
+                width: 100%;
+            }

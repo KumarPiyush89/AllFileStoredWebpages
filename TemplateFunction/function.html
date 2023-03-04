@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="stylesheet.css">
+    <!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+<!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+    <title>Template</title>
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-12">
+                <h1 class="bg-info text-light text-center">TEMPLATE IN C++</h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-3 bg-light"></div>
+            <div class="col-sm-6">
+               <!-- <h5>
+                    <span>T</span>
+                    <span>E</span>
+                    <span>M</span>
+                    <span>P</span>
+                    <span>L</span>
+                    <span>A</span>
+                    <span>T</span>
+                    <span>E</span>
+                    <span>-</span>
+                    <span>F</span>
+                    <span>U</span>
+                    <span>N</span>
+                    <span>C</span>
+                    <span>T</span>
+                    <span>I</span>
+                    <span>O</span>
+                    <span>N</span>
+
+                </h5>  -->
+                <hr/>
+                
+                <h3 class="text-center text-danger">TEMPLATE &dash;&gt; 1977 &dash; 1978</h3>
+               
+                <hr/>
+                    The template is one of C++'s most sophisticated and high-powered features.
+                    Although not part of the original specification for C++, it was added several
+                    years ago and is supported by all modern C++ compilers. Using templates, it
+                    is possible to create generic functions and classes. In a generic function or class, the
+                    type of data upon which the function or class operates is specified as a parameter.
+                    Thus, you can use one function or class with several different types of data without
+                    having to explicitly recode specific versions for each data type. Both generic functions
+                    and generic classes are discussed in this chapter.<br/><p class="bg-dark">.</p><hr class="bg-light"/><br/>
+                    <div class="row">
+                        <div class="col-sm-4">
+    
+                        </div>
+                        <div class="col-sm-4">
+                            <button type="button" class="btn btn-info btn-lg text-center">Types of Templates</button>
+                            <p>curvedarrow</p>
+                            <div contenteditable> you can edit me</div>
+                        </div>
+                        <div class="col-sm-4">
+                            
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-4"><hr/>
+                            <button type="button" class="btn btn-info btn-lg text-center">Function Template</button>
+                        </div>
+                        <div class="col-sm-4">
+                            
+                        </div>
+                        <div class="col-sm-4"><hr/>
+                            <button type="button" class="btn btn-info btn-lg text-center">Class Template</button>
+                        </div>
+                    </div>
+                    
+                    <h1><u>Generic</u> <u> Functions</u></h1>
+                    <br/>A generic function defines a general set of operations that will be applied to various
+                    types of data. The type of data that the function will operate upon is passed to it as a
+                    parameter. Through a generic function, a single general procedure can be applied to a
+                    wide range of data. As you probably know, many algorithms are logically the same no
+                    matter what type of data is being operated upon. For example, the Quicksort sorting
+                    algorithm is the same whether it is applied to an array of integers or an array of floats. It
+                    is just that the type of the data being sorted is different. By creating a generic function,
+                    you can define the nature of the algorithm, independent of any data. Once you have
+                    done this, the compiler will automatically generate the correct code for the type of data
+                    that is actually used when you execute the function. In essence, when you create a
+                    generic function you are creating a function that can automatically overload itself<hr/>
+                    <div class="row">
+                        <div class="col-sm-6 bg-light" style=" height:500px; overflow:scroll; ">
+                                <p>
+                                    #include< iostream><br/>
+                                        #include< cmath><br/>
+                                        using namespace std;<br/>
+                                        
+                                        template <class T><br/>
+                                        class MyStack<br/>
+                                        {<br/>
+                                            private:<br/>
+                                             T *list;<br/>
+                                            int tos;<br/>
+                                            int capacity;<br/>
+                                            public:<br/>
+                                                MyStack(int capacity=10)<br/>
+                                                {<br/>
+                                                    this->capacity=abs(capacity);<br/>
+                                                    if(this->capacity==0)<br/>
+                                                    this->capacity=10;<br/>
+                                        
+                                                    list=new T[this->capacity];<br/>
+                                                    tos=0;<br/>
+                                                }<br/>
+                                                ~MyStack()<br/>
+                                                {<br/>
+                                                    if(list!=NULL)<br/>
+                                                    {<br/>
+                                                        delete[] list;<br/>
+                                                        list=NULL;<br/>
+                                                    }<br/>
+                                                }<br/>
+                                                bool push(T data)<br/>
+                                                {<br/>
+                                                    if(tos<capacity)<br/>
+                                                    {<br/>
+                                                        list[tos++]=data;<br/>
+                                                        return true;<br/>
+                                                    }<br/>
+                                        
+                                                    //allocate memory<br/>
+                                                    T *list1=new T[capacity+5];<br/>
+                                                    if(list==NULL)<br/>
+                                                    {<br/>
+                                                        return false;<br/>
+                                                    }<br/>
+                                        
+                                                    //copy current list data into new list<br/>
+                                                    for(int i=0;i<tos;i++)<br/>
+                                                    list1[i]=list[i];<br/>
+                                        
+                                                    //increase capacity<br/>
+                                                    capacity+=5;<br/>
+                                        
+                                                    //delete old list<br/>
+                                                    delete[] list;<br/>
+                                                    //now make list1 as list<br/>
+                                                    list=list1;<br/>
+                                        
+                                                    //push data<br/>
+                                                    list[tos++]=data;<br/>
+                                                    return true;<br/>
+                                                }<br/>
+                                        
+                                                bool pop(T &data)<br/>
+                                                {<br/>
+                                                    if(tos==0)<br/>
+                                                    return false;<br/>
+                                        
+                                                    data=list[--tos];<br/>
+                                                    return true;<br/>
+                                                }<br/>
+                                                bool pop()<br/>
+                                                {<br/>
+                                                    if(tos==0)<br/>
+                                                    return false;<br/>
+                                                    --tos;<br/>
+                                                    return true;<br/>
+                                                }<br/>
+                                                bool pick(T &data)<br/>
+                                                {<br/>
+                                                    if(tos==0)<br/>
+                                                    return false;<br/>
+                                        
+                                                    data=list[tos-1];<br/>
+                                                    return true;<br/>
+                                                }<br/>
+                                                void peep()<br/>
+                                                {<br/>
+                                                    if(tos==0)<br/>
+                                                    {<br/>
+                                                        cout<<"Stack is Empty!";<br/>
+                                                        return;<br/>
+                                                    }<br/>
+                                        
+                                                    cout<<endl;<br/>
+                                                    for(int i=0;i<tos;i++)<br/>
+                                                    {<br/>
+                                                        cout<<list[i];<br/>
+                                                        if(i<tos-1)<br/>
+                                                        cout<<">";<br/>
+                                                    }<br/>
+                                                }<br/>
+                                                int getCapacity()<br/>
+                                                {<br/>
+                                                    return capacity;<br/>
+                                                }<br/>
+                                                int getTOS()<br/>
+                                                {<br/>
+                                                    return tos;<br/>
+                                                }<br/>
+                                        };<br/>
+                                        
+                                        
+                                        
+                                        int main()<br/>
+                                        {<br/>
+                                            //creating object of template class<br/>
+                                            MyStack<int> is1;<br/>
+                                            MyStack<double> ds1;<br/>
+                                            MyStack<char> cs1;<br/>
+                                            MyStack<float> fs1;<br/>
+                                        
+                                            is1.push(10);<br/>
+                                            is1.push(20);<br/>
+                                        
+                                            ds1.push(56.6);<br/>
+                                            ds1.push(89.9);<br/>
+                                        
+                                            cs1.push('A');<br/>
+                                            cs1.push('B');<br/>
+                                            cs1.push('C');<br/>
+                                        
+                                            fs1.push(5.9f);<br/>
+                                            fs1.push(98.96f);<br/>
+                                            fs1.push(4.8f);<br/>
+                                        
+                                            cout<<endl<<"is1 content=";<br/>
+                                            is1.peep();<br/>
+                                        
+                                            cout<<endl<<"ds1 content=";<br/>
+                                            ds1.peep();<br/>
+                                        
+                                            cout<<endl<<endl<<"cs1 content=";<br/>
+                                            cs1.peep();<br/>
+                                        
+                                            cout<<endl<<endl<<"fs1 content=";<br/>
+                                            fs1.peep();<br/>
+                                        
+                                            return 0;<br/>
+                                        
+                                        
+                                        
+                                            return 0;<br/>
+                                        }<br/>
+                            </p>
+                        </div>
+                        <div class="col-sm-6">
+                            <p>
+                                hello
+                            </p>
+                        </div>
+                    </div>
+                    
+                    
+                    <br/><p class="bg-dark">.</p>
+                    <h1>Explicitly Overloading a Generic Function</h1><br/>
+                    Even though a generic function overloads itself as needed, you can explicitly overload
+                    one, too. This is formally called explicit specialization. If you overload a generic function,
+                    that overloaded function overrides (or "hides") the generic function relative to that
+                    specific version. For example, consider the following revised version of the argumentswapping
+                    example shown earlier.<br/><p class="bg-dark">.</p>
+                    <h1>for_each</h1><br/>
+                    The<b> for_each() </b>algorithm applies the function fn to the range of elements specified
+                    by start and end. It returns fn.
+            </div>
+            <div class="col-sm-3 bg-light"></div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TicTakToe</title><link rel="stylesheet" href="stylesheet.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous">
+        </script>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    
+    <script>
+        var player1Symbol="X";
+        var player2Symbol="O";
+        var currentPlayer=1;
+        var clickedButtons=0;
+        var clickedSymbols=[["","",""],["","",""],["","",""]];
+        var allBtnsDisabled="false";         
+    function selectBtn(row,col)
+    {
+        if(clickedSymbols[row][col]!=""||allBtnsDisabled==="true")
+        return;
+
+        clickedButtons++;
+        var btns=[[document.getElementById("b00"),document.getElementById("b01"),document.getElementById("b02")],
+                  [document.getElementById("b10"),document.getElementById("b11"),document.getElementById("b12")],
+                  [document.getElementById("b20"),document.getElementById("b21"),document.getElementById("b22")]
+                 ];
+        
+        if(currentPlayer===1)
+        {
+            btns[row][col].innerHTML=clickedSymbols[row][col]=player1Symbol;
+            currentPlayer=2;
+            document.getElementById("p1").style.backgroundColor="";
+            document.getElementById("p1").style.backgroundColor="";
+            document.getElementById("p2").style.backgroundColor="";
+
+        }
+        else{
+            btns[row][col].innerHTML=clickedSymbols[row][col]=player2Symbol;
+            currentPlayer=1;
+            document.getElementById("p1").style.backgroundColor="";
+            document.getElementById("p2").style.backgroundColor="";
+
+        }    
+        //btns[row][col].disabled="true";
+        
+        var winner=findWinner();
+        
+        if(winner)
+        {
+            // disable all buttons
+            allBtnsDisabled="true";
+             //declare winner
+            if(winner===1)
+            document.getElementById("winner").innerHTML="Player1("+player1Symbol+") has won the match ";
+            else if(winner==2)
+            document.getElementById("winner").innerHTML="Player2("+player2Symbol+") has won the match ";
+            else 
+            document.getElementById("winner").innerHTML="Match drawn";
+        }
+        //disable all buttons if all buttons clicked.
+        if(clickedButtons===9)
+        {
+            document.getElementById("p1").style.backgroundColor="";
+            document.getElementById("p2").style.backgroundColor="";
+        }
+        
+        return;
+    }
+    
+    // function for loading symbols.
+    function loadPlayerSymbols()
+    {
+        document.getElementById("p1").innerHTML=player1Symbol;
+        document.getElementById("p2").innerHTML=player2Symbol;
+        document.getElementById("p1").style.backgroundColor="";
+        document.getElementById("p2").style.backgroundColor="";
+        return ;
+    }
+    //function for reset buttons
+    function reset()
+    {
+        var row,col;
+        var btns=[[document.getElementById("b00"),document.getElementById("b01"),document.getElementById("b02")],
+                  [document.getElementById("b10"),document.getElementById("b11"),document.getElementById("b12")],
+                  [document.getElementById("b20"),document.getElementById("b21"),document.getElementById("b22")]
+                 ];
+        for(row=0;row<3;row++)
+        {
+            for(col=0;col<3;col++)
+            {
+                allBtnsDisabled="false";
+                btns[row][col].innerHTML="";
+                btns[row][col].style.background="";
+                clickedSymbols[row][col]="";
+            }
+        }
+        clickedButtons=0;
+            currentPlayer=1;
+            document.getElementById("winner").innerHTML="";
+            loadPlayerSymbols();
+
+        return;
+    }
+    function findWinner()
+    {
+        var i,j;
+        var btns=[[document.getElementById("b00"),document.getElementById("b01"),document.getElementById("b02")],
+                  [document.getElementById("b10"),document.getElementById("b11"),document.getElementById("b12")],
+                  [document.getElementById("b20"),document.getElementById("b21"),document.getElementById("b22")]
+                 ];
+        if(clickedButtons>4)
+        {
+          
+          
+           for(j=0,i=0;i<3;i++)
+            {
+                 //checking row-wise.
+                if(clickedSymbols[i][j]===player1Symbol&&clickedSymbols[i][j+1]===player1Symbol&&clickedSymbols[i][j+2]===player1Symbol)
+                {
+                    btns[i][j].style.backgroundColor="green";
+                    btns[i][j+1].style.backgroundColor="green";
+                    btns[i][j+2].style.backgroundColor="green";
+                    return 1;
+                }
+                if(clickedSymbols[i][j]===player2Symbol&&clickedSymbols[i][j+1]===player2Symbol&&clickedSymbols[i][j+2]===player2Symbol)
+                {
+                    btns[i][j].style.backgroundColor="green";
+                    btns[i][j+1].style.backgroundColor="green";
+                    btns[i][j+2].style.backgroundColor="green";
+                    return 2;
+                }
+                
+            }
+            //checking col-wise
+            for(i=0,j=0;j<3;j++)
+            {
+                if(clickedSymbols[i][j]===player1Symbol&&clickedSymbols[i+1][j]===player1Symbol&&clickedSymbols[i+2][j]===player1Symbol)
+                {
+                    btns[i][j].style.backgroundColor="green";
+                    btns[i+1][j].style.backgroundColor="green";
+                    btns[i+2][j].style.backgroundColor="green";
+                    return 1;
+                }
+                if(clickedSymbols[i][j]===player2Symbol&&clickedSymbols[i+1][j]===player2Symbol&&clickedSymbols[i+2][j]===player2Symbol)
+                {
+                    btns[i][j].style.backgroundColor="green";
+                    btns[i+1][j].style.backgroundColor="green";
+                    btns[i+2][j].style.backgroundColor="green";
+                    return 2;
+                }
+            }
+            
+            //checking diagonal-wise.
+            
+                if(clickedSymbols[0][0]===player1Symbol&&clickedSymbols[1][1]===player1Symbol&&clickedSymbols[2][2]===player1Symbol)
+                {
+                    btns[0][0].style.backgroundColor="green";
+                    btns[1][1].style.backgroundColor="green";
+                    btns[2][2].style.backgroundColor="green";
+                    return 1;
+                }
+                if(clickedSymbols[0][2]===player1Symbol&&clickedSymbols[1][1]===player1Symbol&&clickedSymbols[2][0]===player1Symbol)
+                {
+                    btns[0][2].style.backgroundColor="green";
+                    btns[1][1].style.backgroundColor="green";
+                    btns[2][0].style.backgroundColor="green";
+                    return 1;
+                }
+                if(clickedSymbols[0][0]===player2Symbol&&clickedSymbols[1][1]===player2Symbol&&clickedSymbols[2][2]===player2Symbol)
+                {
+                    btns[0][0].style.backgroundColor="green";
+                    btns[1][1].style.backgroundColor="green";
+                    btns[2][2].style.backgroundColor="green";
+                    return 2;
+                }
+                if(clickedSymbols[0][2]===player2Symbol&&clickedSymbols[1][1]===player2Symbol&&clickedSymbols[2][0]===player2Symbol)
+                {
+                    btns[0][2].style.backgroundColor="green";
+                    btns[1][1].style.backgroundColor="green";
+                    btns[2][0].style.backgroundColor="green";
+                    return 2;
+                }
+
+            if(clickedButtons===9)
+            return 3;
+            else
+            return 00;
+        }
+        return 0;
+    }
+    </script>
+
+</head>
+<body onload="loadPlayerSymbols();">
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-12 text-center">
+            <h1>Tic-Tac-Toe</h1>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-3">
+            <div class="row">
+                <div class="col-sm-8"><h1>Player 1</h1></div>
+                <div class="col-sm-4"><button class="btn" id="p1"></button></div>
+            </div>
+            <div class="row">
+                <div class="col-sm-8"><h1>Player 2</h1></div>
+                <div class="col-sm-4"><button class="btn" id="p2"></button></div>
+            </div>
+            
+        </div>
+        <div class="col-sm-6">
+            <table class="table table-striped">
+                <tbody>
+                    <tr>
+                        <td><button class="btn btn-primary bsize" id="b00" onclick="selectBtn(0,0);"></button></td>
+                        <td><button class="btn btn-primary bsize" id="b01" onclick="selectBtn(0,1);"></button></td>
+                        <td><button class="btn btn-primary bsize" id="b02" onclick="selectBtn(0,2);"></button></td>
+                    </tr>
+                    <tr>
+                        <td><button class="btn btn-primary bsize" id="b10" onclick="selectBtn(1,0);"></button></td>
+                        <td><button class="btn btn-primary bsize" id="b11" onclick="selectBtn(1,1);"></button></td>
+                        <td><button class="btn btn-primary bsize" id="b12" onclick="selectBtn(1,2);"></button></td>
+                    </tr>
+                    <tr>
+                        <td><button class="btn btn-primary bsize" id="b20" onclick="selectBtn(2,0);"></button></td>
+                        <td><button class="btn btn-primary bsize" id="b21" onclick="selectBtn(2,1);"></button></td>
+                        <td><button class="btn btn-primary bsize" id="b22" onclick="selectBtn(2,2);"></button></td>
+                    </tr>
+                    
+                </tbody>
+            </table>
+            <div class="row">
+                <div class="col-sm-5"></div>
+                <div class="col-sm-2"><button class="btn btn-danger" id="reset" onclick="reset();">Reset</button></div>
+                <div class="col-sm-5"></div>
+            </div>
+        </div>
+        <div class="col-sm-3">
+            <h1 id="winner" style="color:green ;"></h1>
+        </div>
+    </div>
+</div>    
+</body>
+</html>
